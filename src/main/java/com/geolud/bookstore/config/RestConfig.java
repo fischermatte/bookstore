@@ -1,4 +1,4 @@
-package com.geolud.bootpoc.config;
+package com.geolud.bookstore.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;

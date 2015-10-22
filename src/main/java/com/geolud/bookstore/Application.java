@@ -1,6 +1,6 @@
-package com.geolud;
+package com.geolud.bookstore;
 
-import com.geolud.bootpoc.config.RestConfig;
+import com.geolud.bookstore.config.RestConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
