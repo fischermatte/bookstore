@@ -1,15 +1,9 @@
 package com.geolud.bookstore.config;
 
+import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
-import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 
 @Configuration
-public class RestConfig extends RepositoryRestConfigurerAdapter {
+public class RestConfig extends WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter {
 
-    @Override
-    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        super.configureRepositoryRestConfiguration(config);
-        config.setBasePath("/api");
-    }
 }

@@ -1,7 +1,7 @@
 package com.geolud.bookstore.books.service;
 
-import org.springframework.stereotype.Service;
+import com.geolud.bookstore.books.data.BookData;
 
-@Service
-public class BookService {
+public interface BookService {
+    BookData findByIsbn(String isbn);
 }
