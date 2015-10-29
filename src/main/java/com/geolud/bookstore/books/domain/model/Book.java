@@ -1,4 +1,4 @@
-package com.geolud.bookstore.books.domain;
+package com.geolud.bookstore.books.domain.model;
 
 public class Book {
     private final String isbn;

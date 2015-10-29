@@ -1,7 +1,7 @@
 package com.geolud.bookstore.books.service.impl;
 
 import com.geolud.bookstore.books.service.BookService;
-import com.geolud.bookstore.books.data.BookData;
+import com.geolud.bookstore.books.service.data.BookData;
 import org.springframework.stereotype.Service;
 
 @Service

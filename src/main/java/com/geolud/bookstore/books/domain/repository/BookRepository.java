@@ -1,4 +1,4 @@
-package com.geolud.bookstore.books.repository;
+package com.geolud.bookstore.books.domain.repository;
 
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.geolud.bookstore.books.data;
+package com.geolud.bookstore.books.service.data;
 
 public class BookData {
 
