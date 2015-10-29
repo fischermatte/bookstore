@@ -1,7 +1,7 @@
 package com.geolud.bookstore.books.domain.repository;
 
-import org.springframework.stereotype.Repository;
+import com.geolud.bookstore.books.domain.model.Book;
 
-@Repository
-public class BookRepository  {
+public interface BookRepository {
+    Book findByIsdn(String isdn);
 }
