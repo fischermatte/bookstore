@@ -1,13 +1,9 @@
 package com.geolud.bookstore.books.service;
 
-import com.geolud.bookstore.books.service.dto.BookQueryResultDto;
+import com.geolud.bookstore.books.service.dto.BookInfoDto;
+
+import java.util.List;
 
 public interface BookQueryService {
-    /**
-     *
-     * @param isbn
-     * @return
-     * @throws com.geolud.bookstore.books.service.exception.BookNotFoundException
-     */
-    BookQueryResultDto findByIsbn(String isbn);
+    List<BookInfoDto> findByTitle(String title);
 }

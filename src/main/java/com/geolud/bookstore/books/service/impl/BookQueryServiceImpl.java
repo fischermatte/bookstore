@@ -3,11 +3,13 @@ package com.geolud.bookstore.books.service.impl;
 import com.geolud.bookstore.books.domain.model.Book;
 import com.geolud.bookstore.books.domain.repository.BookRepository;
 import com.geolud.bookstore.books.service.BookQueryService;
-import com.geolud.bookstore.books.service.dto.BookQueryResultDto;
+import com.geolud.bookstore.books.service.dto.BookInfoDto;
 import com.geolud.bookstore.books.service.exception.BookNotFoundException;
-import com.geolud.bookstore.books.service.impl.assembler.BookQueryAssembler;
+import com.geolud.bookstore.books.service.impl.assembler.BookAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 class BookQueryServiceImpl implements BookQueryService {
@@ -20,11 +22,11 @@ class BookQueryServiceImpl implements BookQueryService {
     }
 
     @Override
-    public BookQueryResultDto findByIsbn(String isbn) {
-        Book book = bookRepository.findByIsdn(isbn);
-        if (book == null){
-            throw new BookNotFoundException(isbn);
+    public List<BookInfoDto> findByTitle(String title) {
+        List<Book> books = bookRepository.findByTitle(title);
+        if (books == null){
+            throw new BookNotFoundException("could not find book with title: " + title);
         }
-        return BookQueryAssembler.toDto(book);
+        return BookAssembler.toDto(books);
     }
 }
