@@ -1,9 +1,16 @@
 package com.geolud.bookstore.books.domain.repository;
 
 import com.geolud.bookstore.books.domain.model.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
-public interface BookRepository {
-    List<Book> findByTitle(String isbn);
+@Repository
+public interface BookRepository extends JpaRepository<Book, UUID> {
+    @Query("SELECT b FROM Book b WHERE b.title = :title")
+    List<Book> findByTitle(@Param("title") String title);
 }
