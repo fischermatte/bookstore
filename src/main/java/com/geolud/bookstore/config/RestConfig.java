@@ -44,7 +44,7 @@ public class RestConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public Docket petApi() {
+    public Docket bookApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
@@ -65,8 +65,6 @@ public class RestConfig extends WebMvcConfigurerAdapter {
                                 .message("500 message")
                                 .responseModel(new ModelRef("Error"))
                                 .build()))
-                .securitySchemes(newArrayList(apiKey()))
-                .securityContexts(newArrayList(securityContext()))
                 .enableUrlTemplating(true)
                 .globalOperationParameters(
                         newArrayList(new ParameterBuilder()
