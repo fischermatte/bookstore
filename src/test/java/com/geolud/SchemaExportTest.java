@@ -11,15 +11,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import javax.persistence.Persistence;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
-@WebAppConfiguration
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(classes = Application.class)
+//@WebAppConfiguration
 public class SchemaExportTest {
 
     @Autowired
     private LocalContainerEntityManagerFactoryBean em ;
 
-    @Test
+//    @Test
     public void setupSchema() {
         Persistence.generateSchema(em.getPersistenceUnitName(), null);
 
