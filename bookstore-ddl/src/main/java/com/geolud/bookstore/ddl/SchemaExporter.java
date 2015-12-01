@@ -1,4 +1,4 @@
-package com.geolud;
+package com.geolud.bookstore.ddl;
 
 import org.hibernate.jpa.AvailableSettings;
 
