@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.geolud</groupId>
-    <artifactId>bookstore</artifactId>
+    <artifactId>bookstore-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -17,7 +17,7 @@
 
     <modules>
         <module>bookstore-app</module>
-        <module>bookstore-ddl</module>
+        <!--<module>bookstore-ddl</module>-->
     </modules>
 
     <dependencyManagement>
