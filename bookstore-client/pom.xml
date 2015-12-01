@@ -14,7 +14,10 @@
     </parent>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.geolud</groupId>
+            <artifactId>bookstore-service</artifactId>
+        </dependency>
     </dependencies>
 
 

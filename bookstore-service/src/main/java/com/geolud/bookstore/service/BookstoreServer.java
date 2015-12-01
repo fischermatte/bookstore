@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Import;
 
 @Import(RestConfig.class)
 @SpringBootApplication
-public class Application {
+public class BookstoreServer {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(BookstoreServer.class, args);
     }
 
 }
