@@ -9,7 +9,7 @@
         <class>com.geolud.bookstore.books.domain.model.Book</class>
         <properties>
             <!-- Configuring JDBC properties -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/pocdb" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:pocdb" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="sa" />
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
