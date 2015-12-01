@@ -5,12 +5,12 @@
 
     <artifactId>bookstore-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>com.geolud</groupId>
-        <version>0.0.1-SNAPSHOT</version>
         <artifactId>bookstore</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <dependencies>
