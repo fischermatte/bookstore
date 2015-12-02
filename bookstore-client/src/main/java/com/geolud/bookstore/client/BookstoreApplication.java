@@ -8,6 +8,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 
@@ -27,7 +28,7 @@ public class BookstoreApplication extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        SpringApplication.run(BookstoreServer.class, args);
+        ConfigurableApplicationContext ctx = SpringApplication.run(BookstoreServer.class, args);
         Application.launch(args);
     }
 }

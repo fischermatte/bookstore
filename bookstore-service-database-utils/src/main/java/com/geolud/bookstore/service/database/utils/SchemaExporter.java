@@ -1,4 +1,4 @@
-package com.geolud.bookstore.service.ddl;
+package com.geolud.bookstore.service.database.utils;
 
 import org.hibernate.jpa.AvailableSettings;
 
