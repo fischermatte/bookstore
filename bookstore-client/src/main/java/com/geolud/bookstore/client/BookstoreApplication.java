@@ -18,7 +18,7 @@ public class BookstoreApplication extends Application {
 
         WebView view = new WebView();
         WebEngine engine = view.getEngine();
-        engine.load("http://localhost:8080/books/search?title=huhu");
+        engine.load("http://localhost:8080/swagger-ui.html");
         root.getChildren().add(view);
 
         Scene scene = new Scene(root, 800, 600);

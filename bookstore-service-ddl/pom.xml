@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.geolud</groupId>
-            <artifactId>bookstore-app</artifactId>
+            <artifactId>bookstore-service</artifactId>
         </dependency>
     </dependencies>
 
