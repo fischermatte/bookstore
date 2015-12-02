@@ -1,12 +1,12 @@
-package com.geolud.bookstore.service.books.service.dto;
+package com.geolud.bookstore.service.books.service.api;
 
-public class BookInfoDto {
+public class BookData {
 
     private String isbn;
     private String authorLastName;
     private String authorFirstName;
 
-    public BookInfoDto() {
+    public BookData() {
     }
 
     public String getIsbn() {

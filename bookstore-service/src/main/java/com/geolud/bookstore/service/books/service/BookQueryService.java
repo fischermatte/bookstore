@@ -1,9 +1,9 @@
 package com.geolud.bookstore.service.books.service;
 
-import com.geolud.bookstore.service.books.service.dto.BookInfoDto;
+import com.geolud.bookstore.service.books.service.api.BookData;
 
 import java.util.List;
 
 public interface BookQueryService {
-    List<BookInfoDto> findByTitle(String title);
+    List<BookData> findByTitle(String title);
 }

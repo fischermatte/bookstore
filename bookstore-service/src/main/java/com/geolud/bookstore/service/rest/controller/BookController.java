@@ -1,7 +1,7 @@
 package com.geolud.bookstore.service.rest.controller;
 
 import com.geolud.bookstore.service.books.service.BookQueryService;
-import com.geolud.bookstore.service.books.service.dto.BookInfoDto;
+import com.geolud.bookstore.service.books.service.api.BookData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class BookController {
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public ResponseEntity<List<BookInfoDto>> search(@RequestParam("title") String title) {
+    public ResponseEntity<List<BookData>> search(@RequestParam("title") String title) {
         return new ResponseEntity<>(bookQueryService.findByTitle(title), HttpStatus.OK);
     }
 }

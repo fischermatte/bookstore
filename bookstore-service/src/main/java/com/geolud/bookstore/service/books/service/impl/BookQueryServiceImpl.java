@@ -3,7 +3,7 @@ package com.geolud.bookstore.service.books.service.impl;
 import com.geolud.bookstore.service.books.domain.model.Book;
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
 import com.geolud.bookstore.service.books.service.BookQueryService;
-import com.geolud.bookstore.service.books.service.dto.BookInfoDto;
+import com.geolud.bookstore.service.books.service.api.BookData;
 import com.geolud.bookstore.service.books.service.exception.BookNotFoundException;
 import com.geolud.bookstore.service.books.service.impl.assembler.BookAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ class BookQueryServiceImpl implements BookQueryService {
     }
 
     @Override
-    public List<BookInfoDto> findByTitle(String title) {
+    public List<BookData> findByTitle(String title) {
         List<Book> books = bookRepository.findByTitle(title);
         if (books == null){
             throw new BookNotFoundException("could not find book with title: " + title);

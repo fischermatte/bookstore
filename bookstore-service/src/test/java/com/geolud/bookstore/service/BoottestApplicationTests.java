@@ -1,6 +1,5 @@
-package com.geolud;
+package com.geolud.bookstore.service;
 
-import com.geolud.bookstore.service.BookstoreServer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.web.WebAppConfiguration;

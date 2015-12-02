@@ -1,4 +1,4 @@
-package com.geolud.bookstore.client;
+package com.geolud.bookstore.service.bookstore.client;
 
 import com.geolud.bookstore.service.BookstoreServer;
 import javafx.application.Application;

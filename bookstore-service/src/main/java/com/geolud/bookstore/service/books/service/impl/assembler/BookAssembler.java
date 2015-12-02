@@ -1,15 +1,15 @@
 package com.geolud.bookstore.service.books.service.impl.assembler;
 
 import com.geolud.bookstore.service.books.domain.model.Book;
-import com.geolud.bookstore.service.books.service.dto.BookInfoDto;
+import com.geolud.bookstore.service.books.service.api.BookData;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookAssembler {
-    public static List<BookInfoDto> toDto(List<Book> books) {
-        List<BookInfoDto> target = new ArrayList<>();
+    public static List<BookData> toDto(List<Book> books) {
+        List<BookData> target = new ArrayList<>();
         if (CollectionUtils.isEmpty(books)) {
             return target;
         }
@@ -17,8 +17,8 @@ public class BookAssembler {
         return target;
     }
 
-    public static BookInfoDto toDto(Book book) {
-        BookInfoDto dto = new BookInfoDto();
+    public static BookData toDto(Book book) {
+        BookData dto = new BookData();
         dto.setAuthorFirstName(book.getAuthor().getFirstName());
         dto.setAuthorLastName(book.getAuthor().getLastName());
         dto.setIsbn(book.getIsbn());

@@ -1,8 +1,8 @@
 package com.geolud.bookstore.service.database.utils;
 
-import com.geolud.bookstore.service.books.domain.model.Author;
 import com.geolud.bookstore.service.books.domain.model.Book;
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
+import com.geolud.bookstore.service.books.domain.model.Author;
 
 public class BookTestDataFactory {
 
