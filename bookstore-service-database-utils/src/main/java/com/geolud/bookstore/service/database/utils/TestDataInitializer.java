@@ -2,20 +2,15 @@ package com.geolud.bookstore.service.database.utils;
 
 import com.geolud.bookstore.service.books.domain.model.Author;
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
-import com.geolud.bookstore.service.testdata.TestDataFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class TestDataInitializer {
 
     private final BookRepository bookRepository;
     private final TestDataFactory testDataFactory;
 
-    @Autowired
-    public TestDataInitializer(BookRepository bookRepository, TestDataFactory testDataFactory) {
+    public TestDataInitializer(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
-        this.testDataFactory = testDataFactory;
+        this.testDataFactory = new TestDataFactory();
     }
 
     public void insertData(){

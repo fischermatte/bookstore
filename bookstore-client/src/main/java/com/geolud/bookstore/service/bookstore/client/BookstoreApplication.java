@@ -1,6 +1,8 @@
 package com.geolud.bookstore.service.bookstore.client;
 
 import com.geolud.bookstore.service.BookstoreServer;
+import com.geolud.bookstore.service.books.domain.repository.BookRepository;
+import com.geolud.bookstore.service.database.utils.TestDataInitializer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -29,6 +31,8 @@ public class BookstoreApplication extends Application {
 
     public static void main(String[] args) throws IOException {
         ConfigurableApplicationContext ctx = SpringApplication.run(BookstoreServer.class, args);
+        TestDataInitializer initializer = new TestDataInitializer(ctx.getBean(BookRepository.class));
+        initializer.insertData();
         Application.launch(args);
     }
 }

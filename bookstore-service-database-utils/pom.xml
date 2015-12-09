@@ -18,11 +18,6 @@
             <groupId>com.geolud</groupId>
             <artifactId>bookstore-service</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.geolud</groupId>
-            <artifactId>bookstore-service</artifactId>
-            <type>test-jar</type>
-        </dependency>
     </dependencies>
 
     <build>
