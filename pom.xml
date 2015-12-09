@@ -25,7 +25,7 @@
     <modules>
         <module>bookstore-client</module>
         <module>bookstore-service</module>
-        <module>bookstore-service-ddl</module>
+        <module>bookstore-service-database-utils</module>
     </modules>
 
     <dependencyManagement>
@@ -33,6 +33,12 @@
             <dependency>
                 <groupId>com.geolud</groupId>
                 <artifactId>bookstore-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.geolud</groupId>
+                <artifactId>bookstore-service</artifactId>
+                <type>test-jar</type>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
