@@ -1,4 +1,4 @@
-package com.geolud.bookstore.service.books.testutils;
+package com.geolud.bookstore.service.testutils;
 
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ public class TestDataInitializer {
         this.bookRepository = bookRepository;
         this.bookFactory = new TestDataFactory();
     }
-
 
     public void insertBook(String title, String isbn, String authorFirstname, String authorLastname) {
         bookRepository.save(bookFactory.createBook(title, isbn, authorFirstname, authorLastname));

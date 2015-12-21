@@ -18,6 +18,6 @@ public class SchemaExporter {
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_ACTION, "create");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_CREATE_SOURCE, "metadata");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_CREATE_TARGET, "ddl/schema-hsqldb.ddl");
-        Persistence.generateSchema("pocdb", persistenceProperties);
+        Persistence.generateSchema("bookstoredb", persistenceProperties);
     }
 }
