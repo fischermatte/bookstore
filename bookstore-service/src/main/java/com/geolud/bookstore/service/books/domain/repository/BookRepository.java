@@ -11,6 +11,6 @@ import java.util.UUID;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, UUID> {
-    @Query("SELECT b FROM Book b WHERE b.title = :title")
+    @Query("SELECT b FROM Book b WHERE UPPER(b.title)like CONCAT('%',UPPER(:title),'%') ORDER BY b.title")
     List<Book> findByTitle(@Param("title") String title);
 }

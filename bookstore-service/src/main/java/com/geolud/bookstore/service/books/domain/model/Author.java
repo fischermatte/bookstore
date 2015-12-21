@@ -11,6 +11,10 @@ public class Author {
     @Column(name = "AUTHOR_LASTNAME")
     private String lastName;
 
+    private Author() {
+        // hibernate
+    }
+
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;

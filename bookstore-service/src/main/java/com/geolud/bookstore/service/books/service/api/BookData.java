@@ -3,6 +3,7 @@ package com.geolud.bookstore.service.books.service.api;
 public class BookData {
 
     private String isbn;
+    private String title;
     private String authorLastName;
     private String authorFirstName;
 
@@ -15,6 +16,14 @@ public class BookData {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthorLastName() {

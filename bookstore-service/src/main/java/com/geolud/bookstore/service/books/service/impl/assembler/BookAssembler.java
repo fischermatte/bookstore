@@ -22,6 +22,7 @@ public class BookAssembler {
         dto.setAuthorFirstName(book.getAuthor().getFirstName());
         dto.setAuthorLastName(book.getAuthor().getLastName());
         dto.setIsbn(book.getIsbn());
+        dto.setTitle(book.getTitle());
         return dto;
     }
 
