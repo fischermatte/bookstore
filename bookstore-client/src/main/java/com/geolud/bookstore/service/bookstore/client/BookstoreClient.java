@@ -2,7 +2,7 @@ package com.geolud.bookstore.service.bookstore.client;
 
 import com.geolud.bookstore.service.BookstoreServer;
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
-import com.geolud.bookstore.service.database.utils.TestDataInitializer;
+import com.geolud.bookstore.service.database.utils.data.TestDataInitializer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -14,7 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 
-public class BookstoreApplication extends Application {
+public class BookstoreClient extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         StackPane root = new StackPane();

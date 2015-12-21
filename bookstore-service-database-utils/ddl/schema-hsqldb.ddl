@@ -1,3 +1,1 @@
-create table Author (id binary(255) not null, firstName varchar(255), lastName varchar(255), primary key (id))
-create table Book (id binary(255) not null, isbn varchar(255), title varchar(255), author_id binary(255), primary key (id))
-alter table Book add constraint FK_AUTHOR foreign key (author_id) references Author
+CREATE TABLE BOOK (ID BINARY(255) NOT NULL, AUHTOR_FIRSTNAME VARCHAR(255), AUTHOR_LASTNAME VARCHAR(255), ISBN VARCHAR(255) NOT NULL, TITLE VARCHAR(255) NOT NULL, PRIMARY KEY (ID))

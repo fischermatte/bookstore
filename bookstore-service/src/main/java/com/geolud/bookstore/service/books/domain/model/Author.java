@@ -1,11 +1,14 @@
 package com.geolud.bookstore.service.books.domain.model;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Author {
 
+    @Column(name = "AUHTOR_FIRSTNAME")
     private String firstName;
+    @Column(name = "AUTHOR_LASTNAME")
     private String lastName;
 
     public Author(String firstName, String lastName) {

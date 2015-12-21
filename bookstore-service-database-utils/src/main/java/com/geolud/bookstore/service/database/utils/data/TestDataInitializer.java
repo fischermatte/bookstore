@@ -1,4 +1,4 @@
-package com.geolud.bookstore.service.database.utils;
+package com.geolud.bookstore.service.database.utils.data;
 
 import com.geolud.bookstore.service.books.domain.model.Author;
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;

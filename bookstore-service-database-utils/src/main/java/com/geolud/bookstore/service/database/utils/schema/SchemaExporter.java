@@ -1,4 +1,4 @@
-package com.geolud.bookstore.service.database.utils;
+package com.geolud.bookstore.service.database.utils.schema;
 
 import org.hibernate.jpa.AvailableSettings;
 
@@ -17,7 +17,7 @@ public class SchemaExporter {
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_DATABASE_ACTION, "none");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_ACTION, "create");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_CREATE_SOURCE, "metadata");
-        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_CREATE_TARGET, "target/ddl/schema-hsqldb.ddl");
+        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_CREATE_TARGET, "ddl/schema-hsqldb.ddl");
         Persistence.generateSchema("pocdb", persistenceProperties);
     }
 }
