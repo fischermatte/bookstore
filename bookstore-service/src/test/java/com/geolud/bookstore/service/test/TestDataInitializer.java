@@ -1,4 +1,4 @@
-package com.geolud.bookstore.service.testutils;
+package com.geolud.bookstore.service.test;
 
 import com.geolud.bookstore.service.books.domain.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

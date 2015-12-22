@@ -1,14 +1,12 @@
 package com.geolud.bookstore.service;
 
+import com.geolud.bookstore.service.test.BookstoreIntegrationTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = BookstoreServer.class)
-@WebIntegrationTest
+@BookstoreIntegrationTest
 public class BookstoreServerIT {
 
 	@Test

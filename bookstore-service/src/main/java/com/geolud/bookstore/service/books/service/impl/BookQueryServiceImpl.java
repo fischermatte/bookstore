@@ -23,7 +23,7 @@ class BookQueryServiceImpl implements BookQueryService {
 
     @Override
     public List<BookData> findByTitle(String title) {
-        List<Book> books = bookRepository.findByTitle(title);
+        List<Book> books = bookRepository.searchByTitle(title);
         if (books == null){
             throw new BookNotFoundException("could not find book with title: " + title);
         }
