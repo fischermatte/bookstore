@@ -27,8 +27,8 @@ public class BookControllerIT {
     @Before
     public void setUp() throws Exception {
         dataInitializer.insertBook("Die Räuber 1", "123", "Friedrich", "Schiller");
-        dataInitializer.insertBook("Die Räuber 2", "234", "Friedrich", "Schiller");
         dataInitializer.insertBook("Die Räuber 3", "345", "Friedrich", "Schiller");
+        dataInitializer.insertBook("Die Räuber 2", "234", "Friedrich", "Schiller");
         dataInitializer.insertBook("Faust", "456", "Johann Wolfgang", "Goethe");
     }
 
@@ -39,9 +39,9 @@ public class BookControllerIT {
                 BookData[].class);
         BookData[] books = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
-        Assert.assertEquals("123",books[0].getIsbn());
-        Assert.assertEquals("234",books[1].getIsbn());
-        Assert.assertEquals("345",books[2].getIsbn());
+        Assert.assertEquals("123", books[0].getIsbn());
+        Assert.assertEquals("234", books[1].getIsbn());
+        Assert.assertEquals("345", books[2].getIsbn());
     }
 
 }

@@ -1,1 +1,2 @@
-CREATE TABLE BOOK (ID BINARY(255) NOT NULL, AUHTOR_FIRSTNAME VARCHAR(255), AUTHOR_LASTNAME VARCHAR(255), ISBN VARCHAR(255) NOT NULL, TITLE VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+create table Book (id binary(255) not null, AUHTOR_FIRSTNAME varchar(255), AUTHOR_LASTNAME varchar(255), isbn varchar(255) not null, title varchar(255) not null, primary key (id))
+alter table Book add constraint BOOK_UNIQUE_ISBN unique (isbn)

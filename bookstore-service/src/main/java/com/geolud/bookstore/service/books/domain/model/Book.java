@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(name = "BOOK_UNIQUE_ISBN", columnNames = {"isbn"}))
 public class Book {
     @Id
     @GeneratedValue(generator = "uuid")

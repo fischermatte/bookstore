@@ -24,8 +24,8 @@ public class BookQueryServiceIT {
     @Before
     public void setUp() throws Exception {
         dataInitializer.insertBook("Die Räuber 1", "123", "Friedrich", "Schiller");
-        dataInitializer.insertBook("Die Räuber 2", "234", "Friedrich", "Schiller");
         dataInitializer.insertBook("Die Räuber 3", "345", "Friedrich", "Schiller");
+        dataInitializer.insertBook("Die Räuber 2", "234", "Friedrich", "Schiller");
         dataInitializer.insertBook("Faust", "456", "Johann Wolfgang", "Goethe");
     }
 
