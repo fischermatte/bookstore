@@ -5,7 +5,7 @@
 
     <groupId>com.geolud</groupId>
     <artifactId>bookstore</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Demo project for Spring Boot with JPA</description>
@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.0.RELEASE</version>
+        <version>1.3.1.RELEASE</version>
     </parent>
 
     <properties>
@@ -33,17 +33,17 @@
             <dependency>
                 <groupId>com.geolud</groupId>
                 <artifactId>bookstore-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.geolud</groupId>
                 <artifactId>bookstore-service-database-utils</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.geolud</groupId>
                 <artifactId>bookstore-client</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.logging</groupId>
@@ -90,7 +90,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>1.3.0.RELEASE</version>
+                    <version>1.3.1.RELEASE</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
