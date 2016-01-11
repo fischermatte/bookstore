@@ -35,11 +35,11 @@
                 <artifactId>bookstore-service</artifactId>
                 <version>0.0.2-SNAPSHOT</version>
             </dependency>
-            <dependency>
-                <groupId>com.geolud</groupId>
-                <artifactId>bookstore-service-database-utils</artifactId>
-                <version>0.0.2-SNAPSHOT</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.geolud</groupId>-->
+                <!--<artifactId>bookstore-service-database-utils</artifactId>-->
+                <!--<version>0.0.2-SNAPSHOT</version>-->
+            <!--</dependency>-->
             <!--<dependency>-->
                 <!--<groupId>com.geolud</groupId>-->
                 <!--<artifactId>bookstore-client</artifactId>-->
