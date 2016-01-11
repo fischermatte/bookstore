@@ -5,6 +5,9 @@ import org.hibernate.jpa.AvailableSettings;
 import javax.persistence.Persistence;
 import java.util.Properties;
 
+/**
+ * Exports DB Schema to file.
+ */
 public class SchemaExporter {
 
     public static void main (String[] args) {
