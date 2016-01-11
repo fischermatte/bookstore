@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @Ignore // not yet working with orderby
 @RunWith(SpringJUnit4ClassRunner.class)
 @BookstoreIntegrationTest
-public class BookControllerIT {
+public class BookControllerTest {
     @Autowired
     private TestBaseUrl baseUrl;
     @Autowired

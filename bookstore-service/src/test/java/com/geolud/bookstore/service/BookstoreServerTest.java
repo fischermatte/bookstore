@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @BookstoreIntegrationTest
-public class BookstoreServerIT {
+public class BookstoreServerTest {
 
 	@Test
 	public void contextLoads() {

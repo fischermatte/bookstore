@@ -14,7 +14,7 @@ import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @BookstoreIntegrationTest
-public class BookQueryServiceIT {
+public class BookQueryServiceTest {
 
     @Autowired
     private BookQueryService bookQueryService;
