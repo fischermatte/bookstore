@@ -15,10 +15,12 @@ import java.util.List;
 class BookQueryServiceImpl implements BookQueryService {
 
     private final BookRepository bookRepository;
+    private final BookAssembler bookAssembler;
 
     @Autowired
-    public BookQueryServiceImpl(BookRepository bookRepository) {
+    public BookQueryServiceImpl(BookRepository bookRepository, BookAssembler bookAssembler) {
         this.bookRepository = bookRepository;
+        this.bookAssembler = bookAssembler;
     }
 
     @Override
@@ -27,6 +29,6 @@ class BookQueryServiceImpl implements BookQueryService {
         if (books == null){
             throw new BookNotFoundException("could not find book with title: " + title);
         }
-        return BookAssembler.toDto(books);
+        return bookAssembler.toDto(books);
     }
 }
