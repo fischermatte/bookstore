@@ -1,0 +1,1 @@
+web: java -jar bookstore-service/target/bookstore-service-0.0.2-SNAPSHOT.jar
