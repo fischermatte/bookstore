@@ -8,14 +8,14 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.geolud</groupId>
+        <groupId>org.fm</groupId>
         <artifactId>bookstore</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>com.geolud</groupId>
+            <groupId>org.fm</groupId>
             <artifactId>bookstore-service</artifactId>
         </dependency>
     </dependencies>
@@ -33,7 +33,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.geolud.bookstore.service.database.utils.schema.SchemaExporter</mainClass>
+                    <mainClass>org.fm.bookstore.service.database.utils.schema.SchemaExporter</mainClass>
                 </configuration>
             </plugin>
         </plugins>

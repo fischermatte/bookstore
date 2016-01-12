@@ -5,8 +5,8 @@
              version="2.1">
     <persistence-unit name="bookstoredb" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.geolud.bookstore.service.books.domain.model.Book</class>
-        <class>com.geolud.bookstore.service.books.domain.model.Author</class>
+        <class>org.fm.bookstore.service.books.domain.model.Book</class>
+        <class>org.fm.bookstore.service.books.domain.model.Author</class>
         <properties>
             <!-- Configuring JDBC properties -->
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:bookstoredb" />
