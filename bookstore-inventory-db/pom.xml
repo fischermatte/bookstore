@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bookstore-client</artifactId>
+    <artifactId>bookstore-inventory-db</artifactId>
     <version>0.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -18,11 +18,26 @@
             <groupId>org.fischermatte</groupId>
             <artifactId>bookstore-inventory</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.fischermatte</groupId>
-            <artifactId>bookstore-inventory-db</artifactId>
-        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>org.fischermatte.bookstore.inventory.database.utils.schema.SchemaExporter</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
