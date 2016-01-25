@@ -19,4 +19,8 @@ public class TestDataInitializer {
     public void insertBook(String title, String isbn, String authorFirstname, String authorLastname) {
         bookRepository.save(bookFactory.createBook(title, isbn, authorFirstname, authorLastname));
     }
+
+    public void deleteBooks() {
+        bookRepository.deleteAll();
+    }
 }
