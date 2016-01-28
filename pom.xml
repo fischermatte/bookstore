@@ -5,7 +5,7 @@
 
     <groupId>org.fischermatte</groupId>
     <artifactId>bookstore</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Demo project for Spring Boot with JPA</description>
@@ -33,17 +33,17 @@
             <dependency>
                 <groupId>org.fischermatte</groupId>
                 <artifactId>bookstore-inventory</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fischermatte</groupId>
                 <artifactId>bookstore-inventory-db</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fischermatte</groupId>
                 <artifactId>bookstore-client</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.logging</groupId>
