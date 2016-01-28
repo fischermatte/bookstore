@@ -10,10 +10,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @DefaultIntegrationTest
@@ -23,7 +23,7 @@ public class BookControllerIT {
     @Autowired
     private TestDataInitializer dataInitializer;
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private TestRestTemplate restTemplate = new TestRestTemplate();
 
     @Before
     public void setUp() throws Exception {
@@ -58,6 +58,12 @@ public class BookControllerIT {
         Assert.assertEquals("Friedrich", book.getAuthorFirstName());
         Assert.assertEquals("Schiller", book.getAuthorLastName());
         Assert.assertEquals("Die Räuber 3", book.getTitle());
+    }
+
+    @Test
+    public void getByIsbnNotFound() {
+        ResponseEntity<BookData> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/isbn/invalid-isbn", BookData.class);
+        Assert.assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 
 }
