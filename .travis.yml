@@ -3,3 +3,6 @@ jdk: oraclejdk8
 before_install: pip install --user codecov
 after_success: codecov
 script: mvn verify
+addons:
+    code_climate:
+        repo_token: 78ac6eb75c25fc47ec0fbe6ed95ad986f1fc0ae2c5918ed999983cb0bb231d2b

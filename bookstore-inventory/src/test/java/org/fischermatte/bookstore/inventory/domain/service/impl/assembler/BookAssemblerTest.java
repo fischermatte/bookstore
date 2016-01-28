@@ -12,7 +12,6 @@ import java.util.UUID;
 
 public class BookAssemblerTest {
 
-    // TODO use Autowired instead
     private BookAssembler bookAssembler = new BookAssembler();
 
     @Test
