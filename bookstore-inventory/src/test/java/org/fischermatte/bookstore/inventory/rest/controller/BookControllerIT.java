@@ -1,12 +1,12 @@
 package org.fischermatte.bookstore.inventory.rest.controller;
 
 import org.fischermatte.bookstore.inventory.domain.service.api.BookData;
-import org.fischermatte.bookstore.inventory.test.BookstoreIntegrationTest;
-import org.fischermatte.bookstore.inventory.test.TestBaseUrl;
-import org.fischermatte.bookstore.inventory.test.TestDataInitializer;
+import org.fischermatte.bookstore.inventory.test.integration.DefaultIntegrationTest;
+import org.fischermatte.bookstore.inventory.test.integration.RestUrlSupport;
+import org.fischermatte.bookstore.inventory.test.support.TestDataInitializer;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-@Ignore // not yet working with orderby
+//@Ignore // not yet working with orderby
 @RunWith(SpringJUnit4ClassRunner.class)
-@BookstoreIntegrationTest
-public class BookControllerTest {
+@DefaultIntegrationTest
+public class BookControllerIT {
     @Autowired
-    private TestBaseUrl baseUrl;
+    private RestUrlSupport restUrlSupport;
     @Autowired
     private TestDataInitializer dataInitializer;
 
@@ -34,16 +34,31 @@ public class BookControllerTest {
         dataInitializer.insertBook("Faust", "456", "Johann Wolfgang", "Goethe");
     }
 
+    @After
+    public void tearDown() throws Exception {
+        dataInitializer.deleteBooks();
+    }
+
     @Test
     public void searchByTitle() {
-        ResponseEntity<BookData[]> response = restTemplate.getForEntity(
-                baseUrl + "/domain/search?title=räuBer",
+        ResponseEntity<BookData[]> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/search?title=räuBer",
                 BookData[].class);
         BookData[] books = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
         Assert.assertEquals("123", books[0].getIsbn());
         Assert.assertEquals("234", books[1].getIsbn());
         Assert.assertEquals("345", books[2].getIsbn());
+    }
+
+    @Test
+    public void getByIsbn() {
+        ResponseEntity<BookData> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/isbn/345", BookData.class);
+        BookData book = response.getBody();
+        Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
+        Assert.assertEquals("345", book.getIsbn());
+        Assert.assertEquals("Friedrich", book.getAuthorFirstName());
+        Assert.assertEquals("Schiller", book.getAuthorLastName());
+        Assert.assertEquals("Die Räuber 3", book.getTitle());
     }
 
 }

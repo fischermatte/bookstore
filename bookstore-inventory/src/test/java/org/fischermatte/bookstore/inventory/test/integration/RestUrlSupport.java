@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.inventory.test;
+package org.fischermatte.bookstore.inventory.test.integration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-public class TestBaseUrl {
+public class RestUrlSupport {
     @Value("${server.address}")
     private String address;
     @Value("${server.port}")
@@ -20,8 +20,7 @@ public class TestBaseUrl {
         this.baseUrl = "http://" + address + ":" + port + contextPath;
     }
 
-    @Override
-    public String toString() {
+    public String getBaseUrl() {
         return baseUrl;
     }
 }

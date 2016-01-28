@@ -2,20 +2,24 @@ package org.fischermatte.bookstore.inventory.domain.service;
 
 import org.fischermatte.bookstore.inventory.domain.service.api.BookData;
 import org.fischermatte.bookstore.inventory.domain.service.exception.BookNotFoundException;
-import org.fischermatte.bookstore.inventory.test.BookstoreIntegrationTest;
-import org.fischermatte.bookstore.inventory.test.TestDataInitializer;
-import org.junit.After;
+import org.fischermatte.bookstore.inventory.test.unit.DefaultUnitTestConfiguration;
+import org.fischermatte.bookstore.inventory.test.support.TestDataInitializer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@BookstoreIntegrationTest
+@SpringApplicationConfiguration(classes = DefaultUnitTestConfiguration.class)
+@TestPropertySource(locations = "classpath:unit-test.properties")
+@Transactional
 public class BookQueryServiceTest {
 
     @Autowired
@@ -29,11 +33,6 @@ public class BookQueryServiceTest {
         dataInitializer.insertBook("Die Räuber 3", "345", "Friedrich", "Schiller");
         dataInitializer.insertBook("Die Räuber 2", "234", "Friedrich", "Schiller");
         dataInitializer.insertBook("Faust", "456", "Johann Wolfgang", "Goethe");
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        dataInitializer.deleteBooks();
     }
 
     @Test

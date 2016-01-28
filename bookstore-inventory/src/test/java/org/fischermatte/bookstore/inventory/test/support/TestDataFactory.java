@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.inventory.test;
+package org.fischermatte.bookstore.inventory.test.support;
 
 import org.fischermatte.bookstore.inventory.domain.model.Author;
 import org.fischermatte.bookstore.inventory.domain.model.Book;

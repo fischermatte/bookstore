@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.inventory.test;
+package org.fischermatte.bookstore.inventory.test.integration;
 
 import org.fischermatte.bookstore.inventory.BookstoreInventoryServer;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -12,9 +12,9 @@ import java.lang.annotation.Target;
 
 @SpringApplicationConfiguration(classes = BookstoreInventoryServer.class)
 @WebIntegrationTest
-@TestPropertySource(locations="classpath:application-test.properties")
+@TestPropertySource(locations="classpath:integration-test.properties")
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface BookstoreIntegrationTest {
+public @interface DefaultIntegrationTest {
 
 }

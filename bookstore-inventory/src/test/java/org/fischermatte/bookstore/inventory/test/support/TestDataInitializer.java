@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.inventory.test;
+package org.fischermatte.bookstore.inventory.test.support;
 
 import org.fischermatte.bookstore.inventory.domain.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
