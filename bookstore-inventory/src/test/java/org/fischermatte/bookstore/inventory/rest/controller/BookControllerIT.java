@@ -15,7 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-//@Ignore // not yet working with orderby
 @RunWith(SpringJUnit4ClassRunner.class)
 @DefaultIntegrationTest
 public class BookControllerIT {
