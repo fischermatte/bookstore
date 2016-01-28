@@ -8,7 +8,6 @@ import org.fischermatte.bookstore.inventory.domain.service.exception.BookNotFoun
 import org.fischermatte.bookstore.inventory.domain.service.impl.assembler.BookAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
@@ -27,9 +26,6 @@ class BookQueryServiceImpl implements BookQueryService {
     @Override
     public List<BookData> findByTitle(String title) {
         List<Book> books = bookRepository.findByTitle(title);
-        if (CollectionUtils.isEmpty(books)) {
-            throw new BookNotFoundException("could not find any book with title: " + title);
-        }
         return bookAssembler.toDto(books);
     }
 
