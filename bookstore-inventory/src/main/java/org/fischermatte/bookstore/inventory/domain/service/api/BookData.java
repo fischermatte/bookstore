@@ -7,9 +7,6 @@ public class BookData {
     private String authorLastName;
     private String authorFirstName;
 
-    public BookData() {
-    }
-
     public String getIsbn() {
         return isbn;
     }
