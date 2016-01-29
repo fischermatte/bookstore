@@ -2,7 +2,7 @@ package org.fischermatte.bookstore.inventory.rest.controller;
 
 import org.fischermatte.bookstore.inventory.domain.service.api.BookData;
 import org.fischermatte.bookstore.inventory.test.integration.DefaultIntegrationTest;
-import org.fischermatte.bookstore.inventory.test.integration.RestUrlSupport;
+import org.fischermatte.bookstore.inventory.test.integration.RestTestSupport;
 import org.fischermatte.bookstore.inventory.test.support.TestDataInitializer;
 import org.junit.After;
 import org.junit.Assert;
@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @DefaultIntegrationTest
 public class BookControllerIT {
     @Autowired
-    private RestUrlSupport restUrlSupport;
+    private RestTestSupport restTestSupport;
     @Autowired
     private TestDataInitializer dataInitializer;
 
@@ -40,7 +40,7 @@ public class BookControllerIT {
 
     @Test
     public void searchByTitle() {
-        ResponseEntity<BookData[]> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/search?title=räuBer",
+        ResponseEntity<BookData[]> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/search?title=räuBer",
                 BookData[].class);
         BookData[] books = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -51,7 +51,7 @@ public class BookControllerIT {
 
     @Test
     public void getByIsbn() {
-        ResponseEntity<BookData> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/isbn/345", BookData.class);
+        ResponseEntity<BookData> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/345", BookData.class);
         BookData book = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
         Assert.assertEquals("345", book.getIsbn());
@@ -62,7 +62,7 @@ public class BookControllerIT {
 
     @Test
     public void getByIsbnNotFound() {
-        ResponseEntity<BookData> response = restTemplate.getForEntity(restUrlSupport.getBaseUrl() + "/books/isbn/invalid-isbn", BookData.class);
+        ResponseEntity<BookData> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/invalid-isbn", BookData.class);
         Assert.assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 

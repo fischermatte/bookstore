@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-public class RestUrlSupport {
+public class RestTestSupport {
     @Value("${server.address}")
     private String address;
     @Value("${server.port}")
