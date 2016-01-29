@@ -5,14 +5,21 @@ import org.fischermatte.bookstore.inventory.domain.model.Book;
 import org.fischermatte.bookstore.inventory.domain.service.api.BookData;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {BookAssembler.class})
 public class BookAssemblerTest {
 
-    private BookAssembler bookAssembler = new BookAssembler();
+    @Autowired
+    private BookAssembler bookAssembler;
 
     @Test
     public void toDtoSingle() throws Exception {
