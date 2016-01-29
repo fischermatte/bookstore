@@ -12,7 +12,6 @@ public class SchemaExporter {
 
     public static void main (String[] args) {
         generateDdl();
-        System.exit(-1);
     }
 
     private static void generateDdl() {
