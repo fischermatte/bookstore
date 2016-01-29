@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar bookstore-inventory/target/bookstore-inventory-0.2.0-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar bookstore-inventory/target/bookstore-inventory-0.3.0-SNAPSHOT.jar
