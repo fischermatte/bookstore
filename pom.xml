@@ -50,7 +50,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <hibernate.version>5.0.7.Final</hibernate.version>
     </properties>
 
     <modules>
@@ -97,6 +96,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
                 <version>1.3.2.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-tools</artifactId>
+                <version>4.3.2.Final</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
