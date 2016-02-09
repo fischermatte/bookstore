@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.domain.service.impl;
 
-import org.fischermatte.bookstore.catalog.domain.model.Book;
+import org.fischermatte.bookstore.catalog.domain.model.book.Book;
 import org.fischermatte.bookstore.catalog.domain.repository.BookRepository;
 import org.fischermatte.bookstore.catalog.domain.service.BookQueryService;
 import org.fischermatte.bookstore.catalog.domain.service.api.BookData;

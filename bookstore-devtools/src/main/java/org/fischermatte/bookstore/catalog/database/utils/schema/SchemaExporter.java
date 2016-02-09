@@ -21,6 +21,7 @@ public class SchemaExporter {
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_ACTION, "create");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_CREATE_SOURCE, "metadata");
         persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_CREATE_TARGET, "ddl/schema-hsqldb.ddl");
+        persistenceProperties.setProperty(AvailableSettings.NAMING_STRATEGY, "org.hibernate.cfg.ImprovedNamingStrategy");
         Persistence.generateSchema("bookstoredb", persistenceProperties);
     }
 }

@@ -1,7 +1,6 @@
 package org.fischermatte.bookstore.catalog.test.unit;
 
-import org.fischermatte.bookstore.catalog.domain.model.Book;
-import org.fischermatte.bookstore.catalog.domain.repository.BookRepository;
+import org.fischermatte.bookstore.catalog.BookstoreCatalogServer;
 import org.fischermatte.bookstore.catalog.domain.service.BookQueryService;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -14,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @ComponentScan(basePackageClasses = {BookQueryService.class, DefaultUnitTestConfiguration.class, TestDataInitializer.class})
-@EnableJpaRepositories(basePackageClasses = BookRepository.class)
-@EntityScan(basePackageClasses = Book.class)
+@EnableJpaRepositories(basePackageClasses = BookstoreCatalogServer.class)
+@EntityScan(basePackageClasses = BookstoreCatalogServer.class)
 @Import({DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class DefaultUnitTestConfiguration {
 }

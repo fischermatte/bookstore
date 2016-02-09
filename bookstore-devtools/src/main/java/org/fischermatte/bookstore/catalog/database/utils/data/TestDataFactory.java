@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.database.utils.data;
 
-import org.fischermatte.bookstore.catalog.domain.model.Author;
-import org.fischermatte.bookstore.catalog.domain.model.Book;
+import org.fischermatte.bookstore.catalog.domain.model.book.Author;
+import org.fischermatte.bookstore.catalog.domain.model.book.Book;
 
 public class TestDataFactory {
 

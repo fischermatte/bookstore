@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.domain.service.impl.assembler;
 
-import org.fischermatte.bookstore.catalog.domain.model.Author;
-import org.fischermatte.bookstore.catalog.domain.model.Book;
+import org.fischermatte.bookstore.catalog.domain.model.book.Author;
+import org.fischermatte.bookstore.catalog.domain.model.book.Book;
 import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
 import org.junit.Assert;
 import org.junit.Test;

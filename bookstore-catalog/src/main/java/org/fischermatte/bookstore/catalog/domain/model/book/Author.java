@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.model;
+package org.fischermatte.bookstore.catalog.domain.model.book;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -24,15 +24,8 @@ public class Author {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

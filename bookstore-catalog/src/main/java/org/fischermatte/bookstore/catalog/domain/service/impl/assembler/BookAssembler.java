@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.domain.service.impl.assembler;
 
-import org.fischermatte.bookstore.catalog.domain.model.Book;
+import org.fischermatte.bookstore.catalog.domain.model.book.Book;
 import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;

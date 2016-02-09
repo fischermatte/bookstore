@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.domain.repository;
 
-import org.fischermatte.bookstore.catalog.domain.model.Book;
+import org.fischermatte.bookstore.catalog.domain.model.book.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

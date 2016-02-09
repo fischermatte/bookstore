@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <url>https://github.com/fischermatte/bookstore</url>
 
-    <description>Demo project for Spring Boot with JPA</description>
+    <description>A 'bootiful' bookstore based on microservices</description>
 
     <licenses>
         <license>
