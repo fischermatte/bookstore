@@ -53,26 +53,26 @@
     </properties>
 
     <modules>
-        <module>bookstore-client</module>
-        <module>bookstore-inventory</module>
-        <module>bookstore-inventory-db</module>
+        <module>bookstore-catalog</module>
+        <module>bookstore-order</module>
+        <module>bookstore-devtools</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.fischermatte</groupId>
-                <artifactId>bookstore-inventory</artifactId>
+                <artifactId>bookstore-catalog</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fischermatte</groupId>
-                <artifactId>bookstore-inventory-db</artifactId>
+                <artifactId>bookstore-order</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fischermatte</groupId>
-                <artifactId>bookstore-client</artifactId>
+                <artifactId>bookstore-devtools</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
