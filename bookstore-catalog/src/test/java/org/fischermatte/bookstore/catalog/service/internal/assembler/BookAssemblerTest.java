@@ -1,8 +1,9 @@
-package org.fischermatte.bookstore.catalog.domain.service.impl.assembler;
+package org.fischermatte.bookstore.catalog.service.internal.assembler;
 
-import org.fischermatte.bookstore.catalog.domain.model.book.Author;
-import org.fischermatte.bookstore.catalog.domain.model.book.Book;
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
+import org.fischermatte.bookstore.catalog.domain.book.Author;
+import org.fischermatte.bookstore.catalog.domain.book.Book;
+import org.fischermatte.bookstore.catalog.service.api.BookData;
+import org.fischermatte.bookstore.catalog.service.internal.BookAssembler;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

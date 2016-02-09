@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.rest.controller;
 
-import org.fischermatte.bookstore.catalog.domain.service.BookQueryService;
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
+import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.service.BookQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

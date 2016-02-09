@@ -5,9 +5,9 @@
              version="2.1">
     <persistence-unit name="bookstoredb" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>org.fischermatte.bookstore.catalog.domain.model.book.Book</class>
-        <class>org.fischermatte.bookstore.catalog.domain.model.book.Author</class>
-        <class>org.fischermatte.bookstore.catalog.domain.model.stock.Stock</class>
+        <class>org.fischermatte.bookstore.catalog.domain.book.Book</class>
+        <class>org.fischermatte.bookstore.catalog.domain.book.Author</class>
+        <class>org.fischermatte.bookstore.catalog.domain.stock.Stock</class>
         <properties>
             <!-- Configuring JDBC properties -->
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:bookstoredb" />

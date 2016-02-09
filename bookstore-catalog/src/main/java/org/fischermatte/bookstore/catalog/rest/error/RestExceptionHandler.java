@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.rest.error;
 
-import org.fischermatte.bookstore.catalog.domain.service.exception.BookNotFoundException;
+import org.fischermatte.bookstore.catalog.service.BookNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;

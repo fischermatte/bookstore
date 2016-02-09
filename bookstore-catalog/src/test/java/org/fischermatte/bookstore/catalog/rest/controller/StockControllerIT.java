@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.rest.controller;
 
-import org.fischermatte.bookstore.catalog.domain.service.api.StockData;
+import org.fischermatte.bookstore.catalog.service.api.StockData;
 import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
 import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
 import org.junit.Assert;

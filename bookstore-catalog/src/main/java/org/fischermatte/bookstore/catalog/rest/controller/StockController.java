@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.rest.controller;
 
-import org.fischermatte.bookstore.catalog.domain.service.api.StockData;
+import org.fischermatte.bookstore.catalog.service.StockData;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

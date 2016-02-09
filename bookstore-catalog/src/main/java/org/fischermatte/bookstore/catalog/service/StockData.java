@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.service.api;
+package org.fischermatte.bookstore.catalog.service;
 
 public class StockData {
     private int quantity = 0;

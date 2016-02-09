@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.service.exception;
+package org.fischermatte.bookstore.catalog.service;
 
 public class BookNotFoundException extends RuntimeException {
 
