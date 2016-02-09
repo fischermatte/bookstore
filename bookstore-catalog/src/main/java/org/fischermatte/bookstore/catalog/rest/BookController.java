@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.rest.controller;
+package org.fischermatte.bookstore.catalog.rest;
 
 import org.fischermatte.bookstore.catalog.service.BookData;
 import org.fischermatte.bookstore.catalog.service.BookQueryService;

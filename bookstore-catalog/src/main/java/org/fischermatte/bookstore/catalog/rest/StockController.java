@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.rest.controller;
+package org.fischermatte.bookstore.catalog.rest;
 
 import org.fischermatte.bookstore.catalog.service.StockData;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
-package org.fischermatte.bookstore.catalog.rest.controller;
+package org.fischermatte.bookstore.catalog.rest;
 
-import org.fischermatte.bookstore.catalog.service.api.BookData;
+import org.fischermatte.bookstore.catalog.service.BookData;
 import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
 import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
