@@ -6,7 +6,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Author {
 
-    @Column(name = "AUHTOR_FIRSTNAME")
+    @Column(name = "AUTHOR_FIRSTNAME")
     private String firstName;
     @Column(name = "AUTHOR_LASTNAME")
     private String lastName;

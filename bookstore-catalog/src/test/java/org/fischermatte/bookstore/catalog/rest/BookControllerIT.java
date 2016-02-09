@@ -55,8 +55,8 @@ public class BookControllerIT {
         BookData book = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
         Assert.assertEquals("345", book.getIsbn());
-        Assert.assertEquals("Friedrich", book.getAuthorFirstName());
-        Assert.assertEquals("Schiller", book.getAuthorLastName());
+        Assert.assertEquals("Friedrich", book.getAuthor().getFirstName());
+        Assert.assertEquals("Schiller", book.getAuthor().getLastName());
         Assert.assertEquals("Die Räuber 3", book.getTitle());
     }
 
