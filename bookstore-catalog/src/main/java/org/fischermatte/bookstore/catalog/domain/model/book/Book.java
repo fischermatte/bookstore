@@ -1,6 +1,5 @@
 package org.fischermatte.bookstore.catalog.domain.model.book;
 
-import org.fischermatte.bookstore.catalog.domain.model.book.Author;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
