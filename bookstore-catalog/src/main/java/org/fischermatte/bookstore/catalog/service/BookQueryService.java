@@ -1,6 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.service;
-
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
+package org.fischermatte.bookstore.catalog.service;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package org.fischermatte.bookstore.catalog.domain.service.impl.assembler;
+package org.fischermatte.bookstore.catalog.service.internal;
 
-import org.fischermatte.bookstore.catalog.domain.model.book.Author;
-import org.fischermatte.bookstore.catalog.domain.model.book.Book;
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
+import org.fischermatte.bookstore.catalog.domain.book.Author;
+import org.fischermatte.bookstore.catalog.domain.book.Book;
+import org.fischermatte.bookstore.catalog.service.BookData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,8 +31,8 @@ public class BookAssemblerTest {
         BookData dto = bookAssembler.toDto(book);
         Assert.assertEquals(book.getIsbn(), dto.getIsbn());
         Assert.assertEquals(book.getTitle(), dto.getTitle());
-        Assert.assertEquals(book.getAuthor().getFirstName(), dto.getAuthorFirstName());
-        Assert.assertEquals(book.getAuthor().getLastName(), dto.getAuthorLastName());
+        Assert.assertEquals(book.getAuthor().getFirstName(), dto.getAuthor().getFirstName());
+        Assert.assertEquals(book.getAuthor().getLastName(), dto.getAuthor().getLastName());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class BookAssemblerTest {
         List<BookData> dtos = bookAssembler.toDto(books);
         Assert.assertEquals(book.getIsbn(), dtos.get(0).getIsbn());
         Assert.assertEquals(book.getTitle(), dtos.get(0).getTitle());
-        Assert.assertEquals(book.getAuthor().getFirstName(), dtos.get(0).getAuthorFirstName());
-        Assert.assertEquals(book.getAuthor().getLastName(), dtos.get(0).getAuthorLastName());
+        Assert.assertEquals(book.getAuthor().getFirstName(), dtos.get(0).getAuthor().getFirstName());
+        Assert.assertEquals(book.getAuthor().getLastName(), dtos.get(0).getAuthor().getLastName());
     }
 }

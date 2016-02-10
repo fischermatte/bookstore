@@ -1,6 +1,6 @@
-package org.fischermatte.bookstore.catalog.rest.controller;
+package org.fischermatte.bookstore.catalog.rest;
 
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
+import org.fischermatte.bookstore.catalog.service.BookData;
 import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
 import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
@@ -55,8 +55,8 @@ public class BookControllerIT {
         BookData book = response.getBody();
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
         Assert.assertEquals("345", book.getIsbn());
-        Assert.assertEquals("Friedrich", book.getAuthorFirstName());
-        Assert.assertEquals("Schiller", book.getAuthorLastName());
+        Assert.assertEquals("Friedrich", book.getAuthor().getFirstName());
+        Assert.assertEquals("Schiller", book.getAuthor().getLastName());
         Assert.assertEquals("Die Räuber 3", book.getTitle());
     }
 

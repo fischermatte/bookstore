@@ -1,7 +1,5 @@
-package org.fischermatte.bookstore.catalog.domain.service;
+package org.fischermatte.bookstore.catalog.service;
 
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
-import org.fischermatte.bookstore.catalog.domain.service.exception.BookNotFoundException;
 import org.fischermatte.bookstore.catalog.test.unit.DefaultUnitTestConfiguration;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
 import org.junit.Assert;

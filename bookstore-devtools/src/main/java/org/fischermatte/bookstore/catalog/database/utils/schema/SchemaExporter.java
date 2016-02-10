@@ -1,27 +1,43 @@
 package org.fischermatte.bookstore.catalog.database.utils.schema;
 
-import org.hibernate.jpa.AvailableSettings;
 
-import javax.persistence.Persistence;
-import java.util.Properties;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Exports DB Schema to file.
  */
 public class SchemaExporter {
 
-    public static void main (String[] args) {
-        generateDdl();
+    public static void main(String[] args) throws IOException {
+        generateDdlScript("bookstore-catalog", "org.fischermatte.bookstore.catalog");
+        generateDdlScript("bookstore-order", "org.fischermatte.bookstore.order");
     }
 
-    private static void generateDdl() {
-        final Properties persistenceProperties = new Properties();
-        persistenceProperties.setProperty(org.hibernate.cfg.AvailableSettings.HBM2DDL_AUTO, "");
-        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_DATABASE_ACTION, "none");
-        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_ACTION, "create");
-        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_CREATE_SOURCE, "metadata");
-        persistenceProperties.setProperty(AvailableSettings.SCHEMA_GEN_SCRIPTS_CREATE_TARGET, "ddl/schema-hsqldb.ddl");
-        persistenceProperties.setProperty(AvailableSettings.NAMING_STRATEGY, "org.hibernate.cfg.ImprovedNamingStrategy");
-        Persistence.generateSchema("bookstoredb", persistenceProperties);
+    private static void generateDdlScript(String name, String scanPackages) throws IOException {
+
+        DriverManagerDataSource dataSource = new DriverManagerDataSource("jdbc:hsqldb:mem:bookstoredb", "sa", "sa");
+        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
+
+        LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
+        builder.scanPackages(scanPackages);
+        builder.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+        builder.setNamingStrategy(new SpringNamingStrategy());
+
+        File f = new File(System.getProperty("user.dir") + "/target/ddl/" + name + ".ddl");
+        if (!f.exists()) {
+            f.getParentFile().mkdirs();
+            f.createNewFile();
+        }
+        SchemaExport schemaExport = new SchemaExport(builder);
+        schemaExport.setDelimiter(";");
+        schemaExport.setFormat(true);
+        schemaExport.setOutputFile(f.getAbsolutePath());
+        schemaExport.create(true, false);
     }
 }

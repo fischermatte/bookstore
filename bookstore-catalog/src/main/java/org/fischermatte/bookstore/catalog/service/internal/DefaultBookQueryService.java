@@ -1,24 +1,23 @@
-package org.fischermatte.bookstore.catalog.domain.service.impl;
+package org.fischermatte.bookstore.catalog.service.internal;
 
-import org.fischermatte.bookstore.catalog.domain.model.book.Book;
-import org.fischermatte.bookstore.catalog.domain.repository.BookRepository;
-import org.fischermatte.bookstore.catalog.domain.service.BookQueryService;
-import org.fischermatte.bookstore.catalog.domain.service.api.BookData;
-import org.fischermatte.bookstore.catalog.domain.service.exception.BookNotFoundException;
-import org.fischermatte.bookstore.catalog.domain.service.impl.assembler.BookAssembler;
+import org.fischermatte.bookstore.catalog.domain.book.Book;
+import org.fischermatte.bookstore.catalog.domain.book.BookRepository;
+import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.service.BookNotFoundException;
+import org.fischermatte.bookstore.catalog.service.BookQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-class BookQueryServiceImpl implements BookQueryService {
+class DefaultBookQueryService implements BookQueryService {
 
     private final BookRepository bookRepository;
     private final BookAssembler bookAssembler;
 
     @Autowired
-    public BookQueryServiceImpl(BookRepository bookRepository, BookAssembler bookAssembler) {
+    public DefaultBookQueryService(BookRepository bookRepository, BookAssembler bookAssembler) {
         this.bookRepository = bookRepository;
         this.bookAssembler = bookAssembler;
     }

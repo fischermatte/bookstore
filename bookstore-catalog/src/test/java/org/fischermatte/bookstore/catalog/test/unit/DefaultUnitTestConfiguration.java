@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.test.unit;
 
 import org.fischermatte.bookstore.catalog.BookstoreCatalogServer;
-import org.fischermatte.bookstore.catalog.domain.service.BookQueryService;
+import org.fischermatte.bookstore.catalog.service.BookQueryService;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;

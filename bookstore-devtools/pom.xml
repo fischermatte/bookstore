@@ -18,6 +18,14 @@
             <groupId>org.fischermatte</groupId>
             <artifactId>bookstore-catalog</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.fischermatte</groupId>
+            <artifactId>bookstore-order</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-tools</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
