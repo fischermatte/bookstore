@@ -1,8 +1,7 @@
 package org.fischermatte.bookstore.catalog.service;
 
-import org.fischermatte.bookstore.catalog.test.unit.DefaultUnitTestConfiguration;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
-import org.junit.Assert;
+import org.fischermatte.bookstore.catalog.test.unit.DefaultUnitTestConfiguration;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = DefaultUnitTestConfiguration.class)
@@ -36,17 +37,15 @@ public class BookQueryServiceTest {
     @Test
     public void findByTitle() throws Exception {
         List<BookData> books = bookQueryService.findByTitle("rÄuber");
-        Assert.assertEquals(3, books.size());
-        Assert.assertEquals("123", books.get(0).getIsbn());
-        Assert.assertEquals("234", books.get(1).getIsbn());
-        Assert.assertEquals("345", books.get(2).getIsbn());
+        assertThat(books.size()).isEqualTo(3);
+        assertThat(books).extracting(BookData::getIsbn).containsSequence("123", "234", "345");
     }
 
     @Test
     public void getByIsbn() throws Exception {
         BookData book = bookQueryService.getByIsbn("123");
-        Assert.assertEquals("123", book.getIsbn());
-        Assert.assertEquals("Die Räuber 1", book.getTitle());
+        assertThat(book.getIsbn()).isEqualTo("123");
+        assertThat(book.getTitle()).isEqualTo("Die Räuber 1");
     }
 
 

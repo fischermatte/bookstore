@@ -103,6 +103,12 @@
                 <artifactId>hibernate-tools</artifactId>
                 <version>4.3.2.Final</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.3.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
