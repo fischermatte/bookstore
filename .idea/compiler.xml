@@ -100,6 +100,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for devtools" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="devtools" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bookstore" target="1.8" />
@@ -116,6 +123,7 @@
       <module name="bookstore-service" target="1.8" />
       <module name="bookstore-service-database-utils" target="1.8" />
       <module name="bookstore-service-ddl" target="1.8" />
+      <module name="devtools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

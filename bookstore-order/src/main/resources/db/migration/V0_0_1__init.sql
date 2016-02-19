@@ -1,4 +1,4 @@
-    CREATE TABLE ORDER (
+    CREATE TABLE "order" (
         ID BINARY(255) NOT NULL,
         PRIMARY KEY (ID)
     );

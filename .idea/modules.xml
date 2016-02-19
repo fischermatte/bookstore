@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bookstore.iml" filepath="$PROJECT_DIR$/bookstore.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-catalog/bookstore-catalog.iml" filepath="$PROJECT_DIR$/bookstore-catalog/bookstore-catalog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bookstore-devtools/bookstore-devtools.iml" filepath="$PROJECT_DIR$/bookstore-devtools/bookstore-devtools.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-inventory/bookstore-inventory.iml" filepath="$PROJECT_DIR$/bookstore-inventory/bookstore-inventory.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-order/bookstore-order.iml" filepath="$PROJECT_DIR$/bookstore-order/bookstore-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/devtools/devtools.iml" filepath="$PROJECT_DIR$/devtools/devtools.iml" />
     </modules>
   </component>
 </project>

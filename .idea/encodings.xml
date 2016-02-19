@@ -3,10 +3,10 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bookstore-catalog" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bookstore-devtools" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bookstore-infrastructure" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bookstore-inventory" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bookstore-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/devtools" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -56,7 +56,7 @@
         <module>bookstore-catalog</module>
         <module>bookstore-order</module>
         <module>bookstore-inventory</module>
-        <module>bookstore-devtools</module>
+        <module>devtools</module>
     </modules>
 
     <dependencyManagement>
