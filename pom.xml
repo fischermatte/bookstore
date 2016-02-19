@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.fischermatte</groupId>
-    <artifactId>bookstore</artifactId>
+    <groupId>org.fischermatte.bookstore</groupId>
+    <artifactId>bookstore-root</artifactId>
     <version>0.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>https://github.com/fischermatte/bookstore</url>
@@ -62,27 +62,27 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-catalog</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-order</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-inventory</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-devtools</artifactId>
                 <version>${project.version}</version>
             </dependency>
