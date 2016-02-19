@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog;
 
-import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
+import org.fischermatte.bookstore.catalog.test.integration.CatalogIntegrationTest;
 import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@DefaultIntegrationTest
+@CatalogIntegrationTest
 public class BookstoreCatalogServerIT {
 
     @Autowired

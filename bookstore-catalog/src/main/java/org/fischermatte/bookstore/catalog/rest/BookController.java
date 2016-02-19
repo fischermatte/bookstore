@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.rest;
 
-import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.service.BookDTO;
 import org.fischermatte.bookstore.catalog.service.BookQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,12 +21,12 @@ public class BookController {
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public ResponseEntity<List<BookData>> search(@RequestParam("title") String title) {
+    public ResponseEntity<List<BookDTO>> search(@RequestParam("title") String title) {
         return new ResponseEntity<>(bookQueryService.findByTitle(title), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/isbn/{isbn}", method = RequestMethod.GET)
-    public ResponseEntity<BookData> getByIsbn(@PathVariable("isbn") String isbn) {
+    public ResponseEntity<BookDTO> getByIsbn(@PathVariable("isbn") String isbn) {
         return new ResponseEntity<>(bookQueryService.getByIsbn(isbn), HttpStatus.OK);
     }
 

@@ -17,11 +17,12 @@ public class SchemaExporter {
     public static void main(String[] args) throws IOException {
         generateDdlScript("bookstore-catalog", "org.fischermatte.bookstore.catalog");
         generateDdlScript("bookstore-order", "org.fischermatte.bookstore.order");
+        generateDdlScript("bookstore-inventory", "org.fischermatte.bookstore.inventory");
     }
 
     private static void generateDdlScript(String name, String scanPackages) throws IOException {
 
-        DriverManagerDataSource dataSource = new DriverManagerDataSource("jdbc:hsqldb:mem:bookstoredb", "sa", "sa");
+        DriverManagerDataSource dataSource = new DriverManagerDataSource("jdbc:hsqldb:mem:" + name, "sa", "sa");
         dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
 
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);

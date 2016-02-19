@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.test.support;
 
-import org.fischermatte.bookstore.catalog.domain.book.BookRepository;
+import org.fischermatte.bookstore.catalog.domain.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

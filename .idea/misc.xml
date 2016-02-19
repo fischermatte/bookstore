@@ -15,6 +15,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/bookstore-client/pom.xml" />
+        <option value="$PROJECT_DIR$/bookstore-infrastructure/pom.xml" />
       </set>
     </option>
   </component>

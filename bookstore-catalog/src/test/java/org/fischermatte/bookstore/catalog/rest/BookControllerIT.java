@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.rest;
 
-import org.fischermatte.bookstore.catalog.service.BookData;
-import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
+import org.fischermatte.bookstore.catalog.service.BookDTO;
+import org.fischermatte.bookstore.catalog.test.integration.CatalogIntegrationTest;
 import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
 import org.junit.After;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@DefaultIntegrationTest
+@CatalogIntegrationTest
 public class BookControllerIT {
     @Autowired
     private RestTestSupport restTestSupport;
@@ -41,17 +41,17 @@ public class BookControllerIT {
 
     @Test
     public void searchByTitle() {
-        ResponseEntity<BookData[]> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/search?title=räuBer",
-                BookData[].class);
-        BookData[] books = response.getBody();
+        ResponseEntity<BookDTO[]> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/search?title=räuBer",
+                BookDTO[].class);
+        BookDTO[] books = response.getBody();
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(books).extracting(BookData::getIsbn).containsSequence("123", "234", "345");
+        assertThat(books).extracting(BookDTO::getIsbn).containsSequence("123", "234", "345");
     }
 
     @Test
     public void getByIsbn() {
-        ResponseEntity<BookData> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/345", BookData.class);
-        BookData book = response.getBody();
+        ResponseEntity<BookDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/345", BookDTO.class);
+        BookDTO book = response.getBody();
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(book.getIsbn()).isEqualTo("345");
         assertThat(book.getAuthor().getFirstName()).isEqualTo("Friedrich");
@@ -61,7 +61,7 @@ public class BookControllerIT {
 
     @Test
     public void getByIsbnNotFound() {
-        ResponseEntity<BookData> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/invalid-isbn", BookData.class);
+        ResponseEntity<BookDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/books/isbn/invalid-isbn", BookDTO.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 

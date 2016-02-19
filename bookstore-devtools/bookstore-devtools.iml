@@ -88,6 +88,7 @@
     <orderEntry type="library" name="Maven: org.springframework.hateoas:spring-hateoas:0.19.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.2.2" level="project" />
     <orderEntry type="module" module-name="bookstore-order" />
+    <orderEntry type="module" module-name="bookstore-inventory" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-tools:4.3.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:4.3.11.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-annotations:1.2.0.Beta1" level="project" />

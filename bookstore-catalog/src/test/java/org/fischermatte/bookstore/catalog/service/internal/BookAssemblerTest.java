@@ -1,8 +1,8 @@
 package org.fischermatte.bookstore.catalog.service.internal;
 
-import org.fischermatte.bookstore.catalog.domain.book.Author;
-import org.fischermatte.bookstore.catalog.domain.book.Book;
-import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.domain.Author;
+import org.fischermatte.bookstore.catalog.domain.Book;
+import org.fischermatte.bookstore.catalog.service.BookDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class BookAssemblerTest {
         source.setIsbn("1234");
         source.setTitle("Zauberberg");
         source.setId(UUID.randomUUID());
-        BookData target = bookAssembler.toDto(source);
+        BookDTO target = bookAssembler.toDto(source);
         assertAssemblerResult(source, target);
     }
 
@@ -42,11 +42,11 @@ public class BookAssemblerTest {
         source.setTitle("Zauberberg");
         source.setId(UUID.randomUUID());
         books.add(source);
-        List<BookData> targets = bookAssembler.toDto(books);
+        List<BookDTO> targets = bookAssembler.toDto(books);
         assertAssemblerResult(source, targets.get(0));
     }
 
-    private void assertAssemblerResult(Book source, BookData target) {
+    private void assertAssemblerResult(Book source, BookDTO target) {
         assertThat(target.getIsbn()).isEqualTo(source.getIsbn());
         assertThat(target.getTitle()).isEqualTo(source.getTitle());
         assertThat(target.getAuthor().getFirstName()).isEqualTo(source.getAuthor().getFirstName());

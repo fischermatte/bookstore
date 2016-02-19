@@ -1,16 +1,16 @@
 package org.fischermatte.bookstore.catalog.service;
 
-public class BookData {
+public class BookDTO {
 
     private String isbn;
     private String title;
-    private AuthorData author;
+    private AuthorDTO author;
 
-    private BookData() {
+    private BookDTO() {
         // needed for json mapping jackson
     }
 
-    public BookData(String isbn, String title, AuthorData author) {
+    public BookDTO(String isbn, String title, AuthorDTO author) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -24,7 +24,7 @@ public class BookData {
         return title;
     }
 
-    public AuthorData getAuthor() {
+    public AuthorDTO getAuthor() {
         return author;
     }
 

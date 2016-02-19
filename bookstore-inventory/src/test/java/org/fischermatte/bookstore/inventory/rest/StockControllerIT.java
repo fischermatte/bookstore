@@ -1,8 +1,9 @@
-package org.fischermatte.bookstore.catalog.rest;
+package org.fischermatte.bookstore.inventory.rest;
 
-import org.fischermatte.bookstore.catalog.service.StockData;
-import org.fischermatte.bookstore.catalog.test.integration.DefaultIntegrationTest;
-import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
+import org.assertj.core.api.Assertions;
+import org.fischermatte.bookstore.inventory.service.StockDTO;
+import org.fischermatte.bookstore.inventory.test.integration.InventoryIntegrationTest;
+import org.fischermatte.bookstore.inventory.test.integration.RestTestSupport;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@DefaultIntegrationTest
+@InventoryIntegrationTest
 public class StockControllerIT {
     @Autowired
     private RestTestSupport restTestSupport;
@@ -23,9 +24,9 @@ public class StockControllerIT {
 
     @Test
     public void getByIsbn() {
-        ResponseEntity<StockData> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/stock/isbn/345", StockData.class);
-        StockData stock = response.getBody();
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        ResponseEntity<StockDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/stock/isbn/345", StockDTO.class);
+        StockDTO stock = response.getBody();
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(stock.getQuantity()).isEqualTo(0);
     }
 

@@ -1,9 +1,9 @@
 package org.fischermatte.bookstore.catalog.service.internal;
 
-import org.fischermatte.bookstore.catalog.domain.book.Author;
-import org.fischermatte.bookstore.catalog.domain.book.Book;
-import org.fischermatte.bookstore.catalog.service.AuthorData;
-import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.domain.Author;
+import org.fischermatte.bookstore.catalog.domain.Book;
+import org.fischermatte.bookstore.catalog.service.AuthorDTO;
+import org.fischermatte.bookstore.catalog.service.BookDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -12,8 +12,8 @@ import java.util.List;
 
 @Component
 public class BookAssembler {
-    public List<BookData> toDto(List<Book> books) {
-        List<BookData> target = new ArrayList<>();
+    public List<BookDTO> toDto(List<Book> books) {
+        List<BookDTO> target = new ArrayList<>();
         if (CollectionUtils.isEmpty(books)) {
             return target;
         }
@@ -21,18 +21,18 @@ public class BookAssembler {
         return target;
     }
 
-    public BookData toDto(Book book) {
+    public BookDTO toDto(Book book) {
         if (book == null) {
             return null;
         }
-        return new BookData(book.getIsbn(), book.getTitle(), toDto(book.getAuthor()));
+        return new BookDTO(book.getIsbn(), book.getTitle(), toDto(book.getAuthor()));
     }
 
-    private AuthorData toDto(Author author) {
+    private AuthorDTO toDto(Author author) {
         if (author == null) {
             return null;
         }
-        return new AuthorData(author.getFirstName(), author.getLastName());
+        return new AuthorDTO(author.getFirstName(), author.getLastName());
     }
 
 }

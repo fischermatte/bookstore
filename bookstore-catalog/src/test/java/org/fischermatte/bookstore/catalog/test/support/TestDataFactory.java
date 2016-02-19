@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.catalog.test.support;
 
-import org.fischermatte.bookstore.catalog.domain.book.Author;
-import org.fischermatte.bookstore.catalog.domain.book.Book;
+import org.fischermatte.bookstore.catalog.domain.Author;
+import org.fischermatte.bookstore.catalog.domain.Book;
 import org.springframework.stereotype.Component;
 
 @Component

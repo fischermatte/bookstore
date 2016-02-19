@@ -36,14 +36,14 @@ public class BookQueryServiceTest {
 
     @Test
     public void findByTitle() throws Exception {
-        List<BookData> books = bookQueryService.findByTitle("rÄuber");
+        List<BookDTO> books = bookQueryService.findByTitle("rÄuber");
         assertThat(books.size()).isEqualTo(3);
-        assertThat(books).extracting(BookData::getIsbn).containsSequence("123", "234", "345");
+        assertThat(books).extracting(BookDTO::getIsbn).containsSequence("123", "234", "345");
     }
 
     @Test
     public void getByIsbn() throws Exception {
-        BookData book = bookQueryService.getByIsbn("123");
+        BookDTO book = bookQueryService.getByIsbn("123");
         assertThat(book.getIsbn()).isEqualTo("123");
         assertThat(book.getTitle()).isEqualTo("Die Räuber 1");
     }

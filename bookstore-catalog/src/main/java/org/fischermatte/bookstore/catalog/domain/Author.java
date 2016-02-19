@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.book;
+package org.fischermatte.bookstore.catalog.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

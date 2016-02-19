@@ -1,14 +1,14 @@
 package org.fischermatte.bookstore.catalog.service;
 
-public class AuthorData {
+public class AuthorDTO {
     private String firstName;
     private String lastName;
 
-    private AuthorData() {
+    private AuthorDTO() {
         // needed for json mapping jackson
     }
 
-    public AuthorData(String firstName, String lastName) {
+    public AuthorDTO(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

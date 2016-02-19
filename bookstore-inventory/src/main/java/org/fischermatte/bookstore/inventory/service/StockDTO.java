@@ -1,6 +1,6 @@
-package org.fischermatte.bookstore.catalog.service;
+package org.fischermatte.bookstore.inventory.service;
 
-public class StockData {
+public class StockDTO {
     private int quantity = 0;
 
     public int getQuantity() {

@@ -55,11 +55,17 @@
     <modules>
         <module>bookstore-catalog</module>
         <module>bookstore-order</module>
+        <module>bookstore-inventory</module>
         <module>bookstore-devtools</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.fischermatte</groupId>
+                <artifactId>bookstore-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.fischermatte</groupId>
                 <artifactId>bookstore-catalog</artifactId>
@@ -68,6 +74,11 @@
             <dependency>
                 <groupId>org.fischermatte</groupId>
                 <artifactId>bookstore-order</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fischermatte</groupId>
+                <artifactId>bookstore-inventory</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.domain.stock;
+package org.fischermatte.bookstore.inventory.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 

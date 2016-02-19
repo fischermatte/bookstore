@@ -1,8 +1,8 @@
 package org.fischermatte.bookstore.catalog.service.internal;
 
-import org.fischermatte.bookstore.catalog.domain.book.Book;
-import org.fischermatte.bookstore.catalog.domain.book.BookRepository;
-import org.fischermatte.bookstore.catalog.service.BookData;
+import org.fischermatte.bookstore.catalog.domain.Book;
+import org.fischermatte.bookstore.catalog.domain.BookRepository;
+import org.fischermatte.bookstore.catalog.service.BookDTO;
 import org.fischermatte.bookstore.catalog.service.BookNotFoundException;
 import org.fischermatte.bookstore.catalog.service.BookQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +23,13 @@ class DefaultBookQueryService implements BookQueryService {
     }
 
     @Override
-    public List<BookData> findByTitle(String title) {
+    public List<BookDTO> findByTitle(String title) {
         List<Book> books = bookRepository.findByTitle(title);
         return bookAssembler.toDto(books);
     }
 
     @Override
-    public BookData getByIsbn(String isbn) {
+    public BookDTO getByIsbn(String isbn) {
         Book book = bookRepository.getByIsbn(isbn);
         if (book == null) {
             throw new BookNotFoundException("could not find any book with isbn: " + isbn);
