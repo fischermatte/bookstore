@@ -1,15 +1,13 @@
 package org.fischermatte.bookstore.order.database.utils.data;
 
-import org.fischermatte.bookstore.order.domain.Author;
-import org.fischermatte.bookstore.order.domain.Book;
+
+import org.fischermatte.bookstore.catalog.domain.Author;
+import org.fischermatte.bookstore.catalog.domain.Book;
 
 public class TestDataFactory {
 
     public Book createBook(String title, String isbn, Author author){
-        Book book = new Book();
-        book.setAuthor(author);
-        book.setTitle(title);
-        book.setIsbn(isbn);
+        Book book = new Book(isbn, title, author);
         return book;
     }
 

@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.order.rest;
 
 import org.assertj.core.api.Assertions;
-import org.fischermatte.bookstore.order.service.OrderDTO;
+import org.fischermatte.bookstore.catalog.service.OrderDetailsDTO;
 import org.fischermatte.bookstore.order.test.integration.OrderIntegrationTest;
 import org.fischermatte.bookstore.order.test.integration.RestTestSupport;
 import org.junit.Test;
@@ -22,7 +22,7 @@ public class OrderControllerIT {
 
     @Test
     public void getById() {
-        ResponseEntity<OrderDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/order/123", OrderDTO.class);
+        ResponseEntity<OrderDetailsDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/order/123", OrderDetailsDTO.class);
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 

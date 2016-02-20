@@ -1,5 +1,6 @@
     CREATE TABLE "order" (
         ID BINARY(255) NOT NULL,
+        CUSTOMER_ID VARCHAR(255) NOT NULL,
         PRIMARY KEY (ID)
     );
 
