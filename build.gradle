@@ -1,0 +1,12 @@
+subprojects {
+    apply plugin: 'java'
+
+    version = '0.3.0-SNAPSHOT'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+}
