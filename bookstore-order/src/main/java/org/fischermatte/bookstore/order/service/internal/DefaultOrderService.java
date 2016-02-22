@@ -2,6 +2,7 @@ package org.fischermatte.bookstore.order.service.internal;
 
 import org.fischermatte.bookstore.order.domain.OrderRepository;
 import org.fischermatte.bookstore.order.domain.OrderSubmittedEvent;
+import org.fischermatte.bookstore.order.service.OrderDetailsDTO;
 import org.fischermatte.bookstore.order.service.OrderService;
 import org.fischermatte.bookstore.order.service.OrderSubmitCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ class DefaultOrderService implements OrderService {
     public void submitOrder(OrderSubmitCommand orderSubmitCommand) {
         orderRepository.save(OrderAssembler.fromCommand(orderSubmitCommand));
         eventPublisher.publishEvent(new OrderSubmittedEvent());
+    }
+
+    @Override
+    public OrderDetailsDTO getByOrderId(String orderId) {
+        return new OrderDetailsDTO(orderId);
     }
 }
