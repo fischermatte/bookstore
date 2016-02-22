@@ -1,7 +1,7 @@
-package org.fischermatte.bookstore.catalog.service.internal;
+package org.fischermatte.bookstore.order.service.internal;
 
 import org.fischermatte.bookstore.order.domain.Order;
-import org.fischermatte.bookstore.catalog.service.OrderRequestDTO;
+import org.fischermatte.bookstore.order.service.OrderRequestDTO;
 
 class OrderAssembler {
     public static Order fromDto(OrderRequestDTO orderRequest) {

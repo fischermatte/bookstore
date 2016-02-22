@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.order.rest;
 
-import org.fischermatte.bookstore.catalog.service.OrderDetailsDTO;
-import org.fischermatte.bookstore.catalog.service.OrderRequestDTO;
+import org.fischermatte.bookstore.order.service.OrderDetailsDTO;
+import org.fischermatte.bookstore.order.service.OrderRequestDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

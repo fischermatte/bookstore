@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.test.unit;
+package org.fischermatte.bookstore.order.test.unit;
 
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;

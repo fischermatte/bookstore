@@ -1,4 +1,4 @@
-package org.fischermatte.bookstore.catalog.test.unit;
+package org.fischermatte.bookstore.order.test.unit;
 
 import org.fischermatte.bookstore.order.test.support.TestDataInitializer;
 import org.fischermatte.bookstore.order.BookstoreOrderServer;

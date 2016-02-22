@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.order.rest;
 
-import org.fischermatte.bookstore.catalog.service.OrderDetailsDTO;
+import org.fischermatte.bookstore.order.service.OrderDetailsDTO;
 import org.fischermatte.bookstore.order.test.integration.OrderIntegrationTest;
 import org.fischermatte.bookstore.order.test.integration.RestTestSupport;
 import org.junit.Test;
