@@ -1,9 +1,6 @@
 package org.fischermatte.bookstore.order.domain;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
 
@@ -11,7 +8,9 @@ import java.util.UUID;
 public class OrderItem {
 
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private UUID id;
+
+    public UUID getId() {
+        return id;
+    }
 }

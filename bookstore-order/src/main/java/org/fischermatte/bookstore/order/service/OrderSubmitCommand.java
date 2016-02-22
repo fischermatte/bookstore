@@ -1,17 +1,17 @@
-package org.fischermatte.bookstore.catalog.service;
+package org.fischermatte.bookstore.order.service;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class OrderRequestDTO {
+public class OrderSubmitCommand {
 
     @NotEmpty
     private String customerId;
 
-    private OrderRequestDTO() {
+    private OrderSubmitCommand() {
         // needed for json mapping jackson
     }
 
-    public OrderRequestDTO(String customerId) {
+    public OrderSubmitCommand(String customerId) {
         this.customerId = customerId;
     }
 

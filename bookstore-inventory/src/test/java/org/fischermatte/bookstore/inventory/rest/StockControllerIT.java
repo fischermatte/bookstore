@@ -1,6 +1,5 @@
 package org.fischermatte.bookstore.inventory.rest;
 
-import org.assertj.core.api.Assertions;
 import org.fischermatte.bookstore.inventory.service.StockDTO;
 import org.fischermatte.bookstore.inventory.test.integration.InventoryIntegrationTest;
 import org.fischermatte.bookstore.inventory.test.integration.RestTestSupport;
@@ -26,7 +25,7 @@ public class StockControllerIT {
     public void getByIsbn() {
         ResponseEntity<StockDTO> response = restTemplate.getForEntity(restTestSupport.getBaseUrl() + "/stock/isbn/345", StockDTO.class);
         StockDTO stock = response.getBody();
-        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(stock.getQuantity()).isEqualTo(0);
     }
 

@@ -25,7 +25,6 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
      *
      * @see <a href="https://github.com/springfox/springfox/issues/631">https://github.com/springfox/springfox/issues/631</a>
      *
-     * @return
      */
     @Bean
     public Docket swaggerSpringMvcPlugin() {

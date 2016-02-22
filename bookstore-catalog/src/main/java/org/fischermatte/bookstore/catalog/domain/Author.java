@@ -11,7 +11,7 @@ public class Author {
     @Column(name = "AUTHOR_LASTNAME")
     private String lastName;
 
-    private Author() {
+    protected Author() {
         // hibernate
     }
 

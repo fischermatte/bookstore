@@ -1,23 +1,25 @@
 package org.fischermatte.bookstore.order.domain;
 
-import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 // TODO make table name work with Uppercase.
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(name="\"order\"")  // quotes since order is reserved
 public class Order {
     @Id
     private UUID id;
 
-    @NotNull
-    @Column(nullable = false)
+    @NotBlank
+    @Length(max = 255)
+    @Column(nullable = false, length = 255)
     private String customerId;
 
-    private Order (){
+    protected Order (){
         // JPA
     }
 
@@ -28,5 +30,9 @@ public class Order {
 
     public String getCustomerId() {
         return customerId;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }

@@ -1,10 +1,29 @@
-    CREATE TABLE "order" (
-        ID BINARY(255) NOT NULL,
-        CUSTOMER_ID VARCHAR(255) NOT NULL,
-        PRIMARY KEY (ID)
+    create table "order" (
+        id binary(255) not null,
+        customer_id varchar(255) not null,
+        primary key (id)
     );
 
-    CREATE TABLE ORDER_ITEM (
-        ID BINARY(255) NOT NULL,
-        PRIMARY KEY (ID)
+    create table domain_event (
+        event_type varchar(31),
+        domain_event_id binary(255) not null,
+        published_to_remote boolean not null,
+        primary key (domain_event_id)
     );
+
+    create table order_item (
+        id binary(255) not null,
+        primary key (id)
+    );
+
+    create table order_submitted_event (
+        customer_id varchar(255),
+        order_id binary(255),
+        domain_event_id binary(255) not null,
+        primary key (domain_event_id)
+    );
+
+    alter table order_submitted_event
+        add constraint FK_5tn8nr4guct8jf4givxp1mjsd
+        foreign key (domain_event_id)
+        references domain_event;
