@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
+// TODO define foreignkey name to DomainEvent in Hibernate (bug, stackoverflow?)
+// @PrimaryKeyJoinColumn(foreignKey = @ForeignKey(name = "FK_DOMAIN_EVENT_ID"))
 @Entity
 public class OrderSubmittedEvent extends DomainEvent {
     @NotNull

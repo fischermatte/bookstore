@@ -11,7 +11,7 @@ import java.util.UUID;
 public class DomainEventId implements Serializable {
 
     @NotNull
-    @Column(name = "domainEventId", nullable = false)
+    @Column(name = "domain_event_id", nullable = false)
     private UUID id;
 
     public DomainEventId() {
