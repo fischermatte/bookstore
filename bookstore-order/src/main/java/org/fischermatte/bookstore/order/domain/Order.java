@@ -1,7 +1,5 @@
 package org.fischermatte.bookstore.order.domain;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
@@ -28,5 +26,9 @@ public class Order {
 
     public String getCustomerId() {
         return customerId;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }
