@@ -5,5 +5,5 @@ import org.fischermatte.bookstore.order.infrastructure.DomainEvent;
 /**
  * @author fischermatte
  */
-public class OrderRequestSubmittedEvent extends DomainEvent {
+public class OrderSubmittedEvent extends DomainEvent {
 }
