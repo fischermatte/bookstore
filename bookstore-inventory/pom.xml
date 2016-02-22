@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>org.fischermatte.bookstore</groupId>
-        <artifactId>bookstore-root</artifactId>
+        <artifactId>bookstore</artifactId>
         <version>0.3.0-SNAPSHOT</version>
     </parent>
 
