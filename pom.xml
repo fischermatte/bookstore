@@ -120,6 +120,21 @@
                 <artifactId>assertj-core</artifactId>
                 <version>3.3.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>1.0.6.RELEASE</version>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-starter-parent</artifactId>-->
+                <!--<version>Brixton.M5</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+                <!--<exclusions></exclusions>-->
+            <!--</dependency>-->
+
         </dependencies>
     </dependencyManagement>
 
