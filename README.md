@@ -10,7 +10,8 @@
 
 ### Technologies
 
-- Spring Boot (Web, Data JPA, Tomcat, Actuator, Test, Cloud)
+- Spring Boot (Web, Data JPA, Tomcat, Actuator, Test)
+- Spring Cloud Zuul (API Gateway)
 - Swagger
 - FlywayDB
 - AssertJ
