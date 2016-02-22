@@ -1,5 +1,6 @@
 package org.fischermatte.bookstore.order.service.internal;
 
+import org.fischermatte.bookstore.order.domain.Order;
 import org.fischermatte.bookstore.order.domain.OrderRepository;
 import org.fischermatte.bookstore.order.domain.OrderSubmittedEvent;
 import org.fischermatte.bookstore.order.service.OrderDetailsDTO;
@@ -25,8 +26,8 @@ class DefaultOrderService implements OrderService {
     @Transactional
     @Override
     public void submitOrder(OrderSubmitCommand orderSubmitCommand) {
-        orderRepository.save(OrderAssembler.fromCommand(orderSubmitCommand));
-        eventPublisher.publishEvent(new OrderSubmittedEvent());
+        Order order = orderRepository.save(OrderAssembler.fromCommand(orderSubmitCommand));
+        eventPublisher.publishEvent(new OrderSubmittedEvent(order.getId(),orderSubmitCommand.getCustomerId()));
     }
 
     @Override
