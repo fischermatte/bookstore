@@ -1,7 +1,7 @@
 package org.fischermatte.bookstore.order.rest;
 
 import org.fischermatte.bookstore.order.service.OrderDetailsDTO;
-import org.fischermatte.bookstore.order.service.OrderRequestDTO;
+import org.fischermatte.bookstore.order.service.OrderSubmitCommand;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +19,7 @@ public class OrderController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> submitOrder(OrderRequestDTO orderRequest ) {
+    public ResponseEntity<Void> submitOrder(OrderSubmitCommand orderRequest ) {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
