@@ -27,7 +27,6 @@ public class OrderSubmittedEvent extends DomainEvent {
         // jpa
     }
 
-
     public OrderSubmittedEvent(UUID orderId, String customerId) {
         super(DomainEventType.ORDER_SUBMITTED);
         this.orderId = orderId;
