@@ -1,6 +1,6 @@
 # Bookstore 
 
-## A Bootiful Bookstore based on Microservices 
+## A Bootiful Bookstore based on a Microservices Architecture and Domain Driven Design 
 
 [![WTFPL](https://img.shields.io/badge/license-WTFPL-blue.svg)](http://www.wtfpl.net/txt/copying)
 [![Build Status](https://travis-ci.org/fischermatte/bookstore.svg?branch=develop)](https://travis-ci.org/fischermatte/bookstore) 
@@ -10,7 +10,7 @@
 
 ### Technologies
 
-- Spring Boot (Web, Data JPA, Tomcat, Actuator, Test)
+- Spring Boot (Web, Data JPA, Tomcat, Actuator, Test, Cloud)
 - Swagger
 - FlywayDB
 - AssertJ
