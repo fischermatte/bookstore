@@ -30,7 +30,7 @@ public class OrderControllerIT {
 
     @Test
     public void submitOrder() {
-        OrderSubmitCommand command = new OrderSubmitCommand("123");
+        OrderSubmitCommand command = new OrderSubmitCommand("Customer123");
         ResponseEntity<Void> response = restTemplate.postForEntity(restTestSupport.getBaseUrl() + "/order", command, Void.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }

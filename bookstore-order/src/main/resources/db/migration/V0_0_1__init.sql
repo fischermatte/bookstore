@@ -5,7 +5,7 @@
     );
 
     create table domain_event (
-        event_type varchar(31) not null,
+        event_type varchar(31),
         domain_event_id binary(255) not null,
         published_to_remote boolean not null,
         primary key (domain_event_id)

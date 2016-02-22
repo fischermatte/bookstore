@@ -2,6 +2,7 @@ package org.fischermatte.bookstore.order.infrastructure;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
@@ -9,7 +10,8 @@ import java.util.UUID;
 @Embeddable
 public class DomainEventId implements Serializable {
 
-    @Column(name = "domainEventId")
+    @NotNull
+    @Column(name = "domainEventId", nullable = false)
     private UUID id;
 
     public DomainEventId() {

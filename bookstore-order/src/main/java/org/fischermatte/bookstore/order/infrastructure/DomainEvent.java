@@ -1,7 +1,5 @@
 package org.fischermatte.bookstore.order.infrastructure;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -17,31 +15,38 @@ public class DomainEvent {
     @Valid
     private DomainEventId id;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = EVENT_TYPE_COLUMN)
+//    @NotNull
+//    @Enumerated(EnumType.STRING)
+//    @Column(name = EVENT_TYPE_COLUMN, nullable = false)
+    @Transient
     private DomainEventType eventType;
 
     @NotNull
-    private boolean publishedToRemote = false;
+    @Column(nullable = false)
+    private Boolean publishedToRemote = Boolean.FALSE;
 
-    private DomainEvent() {
+    protected DomainEvent() {
         // jpa
     }
 
     public DomainEvent(DomainEventType eventType) {
         this.eventType = eventType;
+        this.id = new DomainEventId();
     }
 
     public DomainEventId getId() {
         return id;
     }
 
-    public boolean isPublishedToRemote() {
+    public Boolean getPublishedToRemote() {
         return publishedToRemote;
     }
 
-    public void setPublishedToRemote(boolean publishedToRemote) {
-        this.publishedToRemote = publishedToRemote;
+    public DomainEventType getEventType() {
+        return eventType;
+    }
+
+    public void updatePublishedToRemote() {
+        this.publishedToRemote = true;
     }
 }

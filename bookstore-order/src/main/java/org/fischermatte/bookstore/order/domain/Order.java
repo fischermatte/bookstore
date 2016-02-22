@@ -1,5 +1,8 @@
 package org.fischermatte.bookstore.order.domain;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
@@ -11,8 +14,9 @@ public class Order {
     @Id
     private UUID id;
 
-    @NotNull
-    @Column(nullable = false)
+    @NotBlank
+    @Length(max = 255)
+    @Column(nullable = false, length = 255)
     private String customerId;
 
     private Order (){
