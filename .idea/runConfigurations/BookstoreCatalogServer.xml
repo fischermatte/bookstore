@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BookstoreCatalogServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.fischermatte.bookstore.catalog.BookstoreCatalogServer" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="bookstore-catalog" />
+    <envs />
+    <method />
+  </configuration>
+</component>

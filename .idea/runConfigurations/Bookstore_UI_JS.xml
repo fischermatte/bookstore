@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Bookstore UI JS" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:8080">
+    <mapping url="http://localhost:8080/index.html" local-file="$PROJECT_DIR$/bookstore-ui/src/main/resources/static/index.html" />
+    <mapping url="http://localhost:8080" local-file="$PROJECT_DIR$/bookstore-ui/src/main/resources/static" />
+    <method>
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="BookstoreInventoryServer" run_configuration_type="SpringBootApplicationConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="BookstoreCatalogServer" run_configuration_type="SpringBootApplicationConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="BookstoreOrderServer" run_configuration_type="SpringBootApplicationConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="BookstoreUiServer" run_configuration_type="SpringBootApplicationConfigurationType" />
+    </method>
+  </configuration>
+</component>

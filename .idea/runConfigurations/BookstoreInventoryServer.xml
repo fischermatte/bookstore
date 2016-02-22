@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BookstoreInventoryServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.fischermatte.bookstore.inventory.BookstoreInventoryServer" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="bookstore-inventory" />
+    <envs />
+    <method />
+  </configuration>
+</component>
