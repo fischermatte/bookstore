@@ -4,10 +4,10 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 // TODO make table name work with Uppercase.
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(name="\"order\"")  // quotes since order is reserved
 public class Order {
@@ -19,7 +19,7 @@ public class Order {
     @Column(nullable = false, length = 255)
     private String customerId;
 
-    private Order (){
+    protected Order (){
         // JPA
     }
 

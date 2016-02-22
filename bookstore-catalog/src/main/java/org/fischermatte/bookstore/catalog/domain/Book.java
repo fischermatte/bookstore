@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(name = "BOOK_UNIQUE_ISBN", columnNames = {"isbn"}))
 public class Book {
@@ -21,7 +22,7 @@ public class Book {
     @Embedded
     private Author author;
 
-    private Book() {
+    protected Book() {
         // jpa
     }
 
