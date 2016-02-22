@@ -1,7 +1,5 @@
 package org.fischermatte.bookstore.order.infrastructure;
 
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -16,7 +14,6 @@ public class DomainEvent {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Length(max = 50)
     @Column(nullable = false, length = 50)
     private DomainEventType eventType;
 

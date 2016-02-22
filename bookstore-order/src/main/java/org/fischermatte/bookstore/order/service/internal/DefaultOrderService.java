@@ -27,7 +27,7 @@ class DefaultOrderService implements OrderService {
     @Override
     public void submitOrder(OrderSubmitCommand orderSubmitCommand) {
         Order order = orderRepository.save(OrderAssembler.fromCommand(orderSubmitCommand));
-        eventPublisher.publishEvent(new OrderSubmittedEvent(order.getId(),orderSubmitCommand.getCustomerId()));
+        eventPublisher.publishEvent(new OrderSubmittedEvent(order.getId(), orderSubmitCommand.getCustomerId()));
     }
 
     @Override
