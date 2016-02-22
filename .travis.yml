@@ -3,7 +3,6 @@ jdk: oraclejdk8
 before_install: pip install --user codecov
 after_success: codecov
 script: mvn verify
-# blacklist
 branches:
   except:
     - bookstore-20-add-gradle
