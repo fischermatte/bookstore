@@ -32,4 +32,12 @@ public class OrderSubmittedEvent extends DomainEvent {
         this.orderId = orderId;
         this.customerId = customerId;
     }
+
+    public UUID getOrderId() {
+        return orderId;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
 }
