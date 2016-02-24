@@ -1,5 +1,19 @@
 # Bookstore 
 
-## A Spring Boot Sample Web Application 
+## A Bootiful Bookstore based on a Microservices Architecture and Domain Driven Design 
 
-[![Build Status](https://travis-ci.org/fischermatte/bookstore.svg?branch=master)](https://travis-ci.org/fischermatte/bookstore) [![Heroku](https://heroku-badge.herokuapp.com/?app=fm-bookstore)](https://fm-bookstore.herokuapp.com) [![Codacy Badge](https://api.codacy.com/project/badge/grade/61962709e3d7459b90baa8cf172181c2)](https://www.codacy.com/app/fischermatte/bookstore)
+[![WTFPL](https://img.shields.io/badge/license-WTFPL-blue.svg)](http://www.wtfpl.net/txt/copying)
+[![Build Status](https://travis-ci.org/fischermatte/bookstore.svg?branch=master)](https://travis-ci.org/fischermatte/bookstore) 
+[![codecov.io](https://codecov.io/github/fischermatte/bookstore/coverage.svg?branch=master)](https://codecov.io/github/fischermatte/bookstore?branch=develop) 
+<!--
+[![Heroku](https://heroku-badge.herokuapp.com/?app=fm-bookstore)](https://fm-bookstore.herokuapp.com) 
+-->
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/61962709e3d7459b90baa8cf172181c2)](https://www.codacy.com/app/fischermatte/bookstore)
+
+### Technologies
+
+- Spring Boot (Web, Data JPA, Tomcat, Actuator, Test)
+- Spring Cloud Zuul (API Gateway)
+- Swagger
+- FlywayDB
+- AssertJ

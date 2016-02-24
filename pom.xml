@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.fischermatte</groupId>
+    <groupId>org.fischermatte.bookstore</groupId>
     <artifactId>bookstore</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0-RELEASE</version>
     <packaging>pom</packaging>
     <url>https://github.com/fischermatte/bookstore</url>
 
-    <description>Demo project for Spring Boot with JPA</description>
+    <description>A 'bootiful' bookstore based on microservices</description>
 
     <licenses>
         <license>
@@ -53,26 +53,38 @@
     </properties>
 
     <modules>
-        <module>bookstore-client</module>
+        <module>bookstore-catalog</module>
+        <module>bookstore-order</module>
         <module>bookstore-inventory</module>
-        <module>bookstore-inventory-db</module>
+        <module>bookstore-ui</module>
+        <module>devtools</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.fischermatte</groupId>
+                <groupId>org.fischermatte.bookstore</groupId>
+                <artifactId>bookstore-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fischermatte.bookstore</groupId>
+                <artifactId>bookstore-catalog</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fischermatte.bookstore</groupId>
+                <artifactId>bookstore-order</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fischermatte.bookstore</groupId>
                 <artifactId>bookstore-inventory</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.fischermatte</groupId>
-                <artifactId>bookstore-inventory-db</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.fischermatte</groupId>
-                <artifactId>bookstore-client</artifactId>
+                <groupId>org.fischermatte.bookstore</groupId>
+                <artifactId>bookstore-devtools</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -97,6 +109,33 @@
                 <artifactId>spring-boot-devtools</artifactId>
                 <version>1.3.2.RELEASE</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-tools</artifactId>
+                <version>4.3.2.Final</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>1.0.6.RELEASE</version>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-starter-parent</artifactId>-->
+                <!--<version>Brixton.M5</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+                <!--<exclusions></exclusions>-->
+            <!--</dependency>-->
+
         </dependencies>
     </dependencyManagement>
 
@@ -125,6 +164,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
         <pluginManagement>
             <plugins>
@@ -167,9 +207,13 @@
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>2.2</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
 
 </project>

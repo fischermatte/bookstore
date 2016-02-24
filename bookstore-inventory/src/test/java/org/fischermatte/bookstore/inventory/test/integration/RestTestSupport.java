@@ -1,5 +1,4 @@
 package org.fischermatte.bookstore.inventory.test.integration;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
