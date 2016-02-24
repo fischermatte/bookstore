@@ -1,6 +1,6 @@
 package org.fischermatte.bookstore.catalog.test.integration;
 
-import org.fischermatte.bookstore.catalog.BookstoreCatalogServer;
+import org.fischermatte.bookstore.catalog.Application;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.TestPropertySource;
@@ -10,7 +10,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@SpringApplicationConfiguration(classes = BookstoreCatalogServer.class)
+@SpringApplicationConfiguration(classes = Application.class)
 @WebIntegrationTest
 @TestPropertySource(locations="classpath:integration-test.properties")
 @Retention(RetentionPolicy.RUNTIME)

@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @CatalogIntegrationTest
-public class BookstoreCatalogServerIT {
+public class ApplicationIT {
 
     @Autowired
     private RestTestSupport restTestSupport;
