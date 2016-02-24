@@ -11,6 +11,4 @@ public class BookstoreUiServer {
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreUiServer.class, args);
 	}
-
-
 }
