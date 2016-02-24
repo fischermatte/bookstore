@@ -1,6 +1,6 @@
 # Bookstore 
 
-## A Bootiful Bookstore based on a Microservices Architecture and Domain Driven Design 
+## Example Application based on Microservices Architecture / Domain Driven Design 
 
 [![WTFPL](https://img.shields.io/badge/license-WTFPL-blue.svg)](http://www.wtfpl.net/txt/copying)
 [![Build Status](https://travis-ci.org/fischermatte/bookstore.svg?branch=master)](https://travis-ci.org/fischermatte/bookstore) 
