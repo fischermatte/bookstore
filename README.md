@@ -1,4 +1,4 @@
-# Bookstore - an example application using 'bootiful' microservices
+## Bookstore - an example application using 'bootiful' microservices
 
 [![WTFPL](https://img.shields.io/badge/license-WTFPL-blue.svg)](http://www.wtfpl.net/txt/copying)
 [![Build Status](https://travis-ci.org/fischermatte/bookstore.svg?branch=develop)](https://travis-ci.org/fischermatte/bookstore) 
