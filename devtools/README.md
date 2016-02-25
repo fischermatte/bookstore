@@ -3,7 +3,7 @@
 ### 1. Schema Generation
 
 In order to generate the Database Schema based on the JPA entities, one can use the `SchemaExporter` 
-from devtools jar. 
+from devtools module. 
 
 SchemaExporter can be invoked from inside the IDE directly or via maven exec plugin:
 
