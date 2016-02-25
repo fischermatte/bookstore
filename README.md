@@ -27,8 +27,6 @@ Bookstore is a distributed system based based on the following microservices/mod
  - bookstore-inventory (Bookstore Inventory REST API)
  - bookstore-ui (AngularJS GUI)
  
-TODO provide diagram
-
 ### Technologies
 
 - Spring Boot (Web, Data JPA, Tomcat, Actuator, Test)
