@@ -1,6 +1,6 @@
-# Bookstore - Dev Tools
+## Bookstore - Dev Tools
 
-## 1. Schema Generation
+### 1. Schema Generation
 
 In order to generate the Database Schema based on the JPA entities, one can use the `SchemaExporter` 
 from devtools jar. 
