@@ -1,4 +1,4 @@
-
+# runs all microservices on a single docker image
 FROM java:8
 MAINTAINER fischermatte@posteo.net
 EXPOSE 8080
