@@ -109,6 +109,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="bookstore-ui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
