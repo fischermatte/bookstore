@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
-    </facet>
-    <facet type="jpa" name="JPA">
       <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
-        <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
-        </datasource-mapping>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/org/fischermatte/bookstore/catalog/Application.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/fischermatte/bookstore/catalog/config/RestConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/fischermatte/bookstore/catalog/config/SwaggerConfig.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

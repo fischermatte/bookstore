@@ -109,7 +109,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="bookstore-ui" />
       </profile>
       <profile default="false" name="Annotation profile for bookstore-config" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />

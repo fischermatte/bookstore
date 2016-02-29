@@ -1,8 +1,0 @@
-ui:
-  image: fischermatte/bookstore-ui
-catalog:
-  image: fischermatte/bookstore-catalog
-inventory:
-  image: fischermatte/bookstore-inventory
-order:
-  image: fischermatte/bookstore-order
