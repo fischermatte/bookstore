@@ -5,4 +5,4 @@ after_success: codecov
 script: mvn verify
 branches:
   except:
-    - bookstore-20-add-gradle
+    - feature/gradle-support
