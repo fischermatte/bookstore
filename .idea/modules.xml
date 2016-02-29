@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bookstore.iml" filepath="$PROJECT_DIR$/bookstore.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-catalog/bookstore-catalog.iml" filepath="$PROJECT_DIR$/bookstore-catalog/bookstore-catalog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookstore-config/bookstore-config.iml" filepath="$PROJECT_DIR$/bookstore-config/bookstore-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-inventory/bookstore-inventory.iml" filepath="$PROJECT_DIR$/bookstore-inventory/bookstore-inventory.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-order/bookstore-order.iml" filepath="$PROJECT_DIR$/bookstore-order/bookstore-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookstore-ui/bookstore-ui.iml" filepath="$PROJECT_DIR$/bookstore-ui/bookstore-ui.iml" />

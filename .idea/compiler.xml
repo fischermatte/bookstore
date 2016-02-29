@@ -111,6 +111,13 @@
         <processorPath useClasspath="true" />
         <module name="bookstore-ui" />
       </profile>
+      <profile default="false" name="Annotation profile for bookstore-config" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="bookstore-config" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bookstore" target="1.8" />
@@ -118,6 +125,7 @@
       <module name="bookstore-catalog" target="1.8" />
       <module name="bookstore-catalog-db" target="1.8" />
       <module name="bookstore-client" target="1.8" />
+      <module name="bookstore-config" target="1.8" />
       <module name="bookstore-ddl" target="1.8" />
       <module name="bookstore-devtools" target="1.8" />
       <module name="bookstore-infrastructure" target="1.8" />
