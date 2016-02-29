@@ -1,7 +1,7 @@
-package org.fischermatte.bookstore.catalog;
+package org.fischermatte.bookstore.inventory;
 
-import org.fischermatte.bookstore.catalog.test.integration.CatalogIntegrationTest;
-import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
+import org.fischermatte.bookstore.inventory.test.integration.InventoryIntegrationTest;
+import org.fischermatte.bookstore.inventory.test.integration.RestTestSupport;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@CatalogIntegrationTest
-public class BookstoreCatalogServerIT {
+@InventoryIntegrationTest
+public class ApplicationIT {
 
     @Autowired
     private RestTestSupport restTestSupport;

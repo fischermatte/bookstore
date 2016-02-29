@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Import;
 
 @Import(value = {RestConfig.class, SwaggerConfig.class})
 @SpringBootApplication
-public class BookstoreInventoryServer {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(BookstoreInventoryServer.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

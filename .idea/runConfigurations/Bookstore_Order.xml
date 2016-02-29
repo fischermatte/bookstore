@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Bookstore Order" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.fischermatte.bookstore.order.Application" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="bookstore-order" />
+    <envs />
+    <method />
+  </configuration>
+</component>
