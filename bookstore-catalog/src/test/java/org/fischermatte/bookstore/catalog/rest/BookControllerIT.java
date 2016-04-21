@@ -2,7 +2,7 @@ package org.fischermatte.bookstore.catalog.rest;
 
 import org.fischermatte.bookstore.catalog.service.BookDTO;
 import org.fischermatte.bookstore.catalog.test.integration.CatalogIntegrationTest;
-import org.fischermatte.bookstore.catalog.test.integration.RestTestSupport;
+import org.fischermatte.bookstore.catalog.test.integration.BaseUrlConfiguration;
 import org.fischermatte.bookstore.catalog.test.support.TestDataInitializer;
 import org.junit.After;
 import org.junit.Before;
@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @CatalogIntegrationTest
 public class BookControllerIT {
     @Autowired
-    private RestTestSupport restTestSupport;
+    private BaseUrlConfiguration restTestSupport;
     @Autowired
     private TestDataInitializer dataInitializer;
 
