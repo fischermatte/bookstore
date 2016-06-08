@@ -4,8 +4,10 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+// TODO make table name work with Uppercase and use propper naming strategy
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@Table(name="DOMAIN_EVENT")
 public class DomainEvent {
 
     @EmbeddedId
@@ -14,11 +16,11 @@ public class DomainEvent {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 50)
+    @Column(name = "EVENT_TYPE", nullable = false, length = 50)
     private DomainEventType eventType;
 
     @NotNull
-    @Column(nullable = false)
+    @Column(name = "PUBLISHED_TO_REMOTE", nullable = false)
     private Boolean publishedToRemote = Boolean.FALSE;
 
     protected DomainEvent() {

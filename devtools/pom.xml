@@ -26,10 +26,6 @@
             <groupId>org.fischermatte.bookstore</groupId>
             <artifactId>bookstore-inventory</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-tools</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
