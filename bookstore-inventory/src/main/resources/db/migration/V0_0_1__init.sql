@@ -1,6 +1,5 @@
-    CREATE TABLE STOCK (
-        ID BINARY(255) NOT NULL,
-        BOOK_ID BINARY(255) NOT NULL,
-        QUANTITY INTEGER NOT NULL,
-        PRIMARY KEY (ID)
-    );
+create table stock (
+  id binary(255) not null,
+  book_id binary(255) not null,
+  quantity integer not null,
+  primary key (id));

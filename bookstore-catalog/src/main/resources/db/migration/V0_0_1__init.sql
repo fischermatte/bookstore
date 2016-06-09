@@ -1,18 +1,9 @@
-    CREATE TABLE BOOK (
-        ID BINARY(255) NOT NULL,
-        AUTHOR_FIRSTNAME VARCHAR(255),
-        AUTHOR_LASTNAME VARCHAR(255),
-        ISBN VARCHAR(255) NOT NULL,
-        TITLE VARCHAR(255) NOT NULL,
-        PRIMARY KEY (ID)
-    );
+create table book (
+  id binary(255) not null,
+  first_name varchar(255),
+  last_name varchar(255),
+  isbn varchar(255) not null,
+  title varchar(255) not null,
+  primary key (id));
 
-    CREATE TABLE STOCK (
-        ID BINARY(255) NOT NULL,
-        BOOK_ID BINARY(255) NOT NULL,
-        QUANTITY INTEGER NOT NULL,
-        PRIMARY KEY (ID)
-    );
-
-    ALTER TABLE BOOK
-        ADD CONSTRAINT BOOK_UNIQUE_ISBN UNIQUE (ISBN);
+alter table book add constraint BOOK_UNIQUE_ISBN unique (isbn);

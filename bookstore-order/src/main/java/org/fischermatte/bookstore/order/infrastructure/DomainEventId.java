@@ -1,17 +1,17 @@
 package org.fischermatte.bookstore.order.infrastructure;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 
 @Embeddable
 public class DomainEventId implements Serializable {
 
     @NotNull
-    @Column(name = "domain_event_id", nullable = false)
+    @Column(nullable = false)
     private UUID id;
 
     public DomainEventId() {
