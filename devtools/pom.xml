@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>devtools</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.3.0-RELEASE</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>org.fischermatte.bookstore</groupId>
         <artifactId>bookstore</artifactId>
-        <version>0.4.0-SNAPSHOT</version>
+        <version>0.3.0-RELEASE</version>
     </parent>
 
     <dependencies>
@@ -25,6 +25,10 @@
         <dependency>
             <groupId>org.fischermatte.bookstore</groupId>
             <artifactId>bookstore-inventory</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-tools</artifactId>
         </dependency>
     </dependencies>
 
